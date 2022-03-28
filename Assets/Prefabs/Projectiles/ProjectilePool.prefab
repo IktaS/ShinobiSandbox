@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4168733859312666058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4168733859312666056}
+  - component: {fileID: 4168733859312666059}
+  m_Layer: 0
+  m_Name: ProjectilePool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4168733859312666056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4168733859312666058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0745916, y: -0.25933003, z: 1.7459522}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4168733859312666059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4168733859312666058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd53aa52f082d402bbb1db7e3b67072a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolInfo:
+  - poolName: Fireball
+    prefab: {fileID: 5438842783721000156, guid: 8b9b46a590814154ebf13380e6652dca, type: 3}
+    poolSize: 10
+    fixedSize: 0
+  - poolName: Lightning
+    prefab: {fileID: 6580466121613387547, guid: aefd63d3265f6f4438cd913b4e05ea4e, type: 3}
+    poolSize: 10
+    fixedSize: 0
+  - poolName: Gust
+    prefab: {fileID: 2768593909738094611, guid: 87c2649f5d9e16c4191c0f03e8c5a6af, type: 3}
+    poolSize: 10
+    fixedSize: 0
+  - poolName: EarthPrisonProj
+    prefab: {fileID: 7786011469751363861, guid: e87de10ee7e7a6946b8ae3b675fd2873, type: 3}
+    poolSize: 10
+    fixedSize: 0
+  - poolName: EarthPrison
+    prefab: {fileID: 4368933139496913706, guid: 1e7ac4370ba052842942a2472e3e57b1, type: 3}
+    poolSize: 10
+    fixedSize: 0

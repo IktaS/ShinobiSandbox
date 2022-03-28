@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &106800274811525548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 667736508413846203}
+  - component: {fileID: 6184803974338062891}
+  - component: {fileID: 205580654821013953}
+  m_Layer: 0
+  m_Name: ResolverDEBUG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &667736508413846203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106800274811525548}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.13375448, y: 0.010550457, z: -0.02202193}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6184803974338062891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106800274811525548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d917878ea0df00841b54e67d899cf0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gestureEvents: {fileID: 0}
+  _caller: 1
+  _startPoint: {fileID: 0}
+  _dirPoint: {fileID: 0}
+  _shieldAction: {fileID: 11400000, guid: b1a1d01045d8c5e45a770c9b2c055161, type: 2}
+  _activateEarthPrisonAction: {fileID: 11400000, guid: 8000072ca5ca27a4c8c72b00ac1b3a6a,
+    type: 2}
+  _aimAction: {fileID: 11400000, guid: 93f4f816046f59944b4df9bac4f64d49, type: 2}
+  _setEarthPrisonAction: {fileID: 11400000, guid: 125661f9ba2d2524581174fe52a4269e,
+    type: 2}
+  _shootFireAction: {fileID: 11400000, guid: be44ab103c6aff144814539443fb0656, type: 2}
+  _shootLightningAction: {fileID: 11400000, guid: 8bf5045991c81794cb96e4f1e330281d,
+    type: 2}
+  _recoverAction: {fileID: 11400000, guid: 56ec388a5c21bc242ab019724268958e, type: 2}
+  _gustAction: {fileID: 11400000, guid: 7f00e86749f14dd469ef1d5322d71583, type: 2}
+  _comboQueue: {fileID: 11400000, guid: 822f49aeba7c51a469d190e3d3b09003, type: 2}
+--- !u!114 &205580654821013953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106800274811525548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d590d45f3a6438429f6bbd2f5f823fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shieldAction: {fileID: 11400000, guid: b1a1d01045d8c5e45a770c9b2c055161, type: 2}
+  _activateEarthPrisonAction: {fileID: 11400000, guid: 8000072ca5ca27a4c8c72b00ac1b3a6a,
+    type: 2}
+  _aimAction: {fileID: 11400000, guid: 93f4f816046f59944b4df9bac4f64d49, type: 2}
+  _setEarthPrisonAction: {fileID: 11400000, guid: 125661f9ba2d2524581174fe52a4269e,
+    type: 2}
+  _shootFireAction: {fileID: 11400000, guid: be44ab103c6aff144814539443fb0656, type: 2}
+  _shootLightningAction: {fileID: 11400000, guid: 8bf5045991c81794cb96e4f1e330281d,
+    type: 2}
+  _recoverAction: {fileID: 11400000, guid: 56ec388a5c21bc242ab019724268958e, type: 2}
+  _gustAction: {fileID: 11400000, guid: 7f00e86749f14dd469ef1d5322d71583, type: 2}
+  _queue: {fileID: 11400000, guid: 48869fd55c035df4186c4b8b8cbcb527, type: 2}
