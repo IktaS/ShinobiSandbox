@@ -423,6 +423,11 @@ PrefabInstance:
       objectReference: {fileID: 434657244}
     - target: {fileID: 4536272112822725198, guid: 1655dfcb8fc5f2b468db636edf92c279,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536272112822725198, guid: 1655dfcb8fc5f2b468db636edf92c279,
+        type: 3}
       propertyPath: _transformRecognizerActiveStates.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -823,9 +828,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86fda5ce347f35d44a5c6faee65c6679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shapeRecognizerActiveState: {fileID: 2051022562}
+  _shapeRecognizerActiveState: {fileID: 1137394381}
   _fingerFeatureDebugVisualPrefab: {fileID: 9164247537266964908, guid: 072f28eaf071f834e82a66e5843572c9,
     type: 3}
+--- !u!114 &1137394381 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 177402261497649040, guid: f39a9d103c4129b42a53567f6cd8356a,
+    type: 3}
+  m_PrefabInstance: {fileID: 429830883}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f7cfb1f9629da4494ac0840f3a3cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1994067297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -901,15 +918,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1994067297}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2051022562 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2810556744358952440, guid: f39a9d103c4129b42a53567f6cd8356a,
-    type: 3}
-  m_PrefabInstance: {fileID: 429830883}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08f7cfb1f9629da4494ac0840f3a3cfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
