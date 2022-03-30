@@ -130,5 +130,5 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 384
-  queue: {fileID: 0}
+  queue: {fileID: 11400000, guid: 3e504338ddeb20d45b4aa2c725657e6d, type: 2}
   earthPrisonGOPoolName: EarthPrison

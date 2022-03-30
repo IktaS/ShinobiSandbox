@@ -17,7 +17,7 @@ MonoBehaviour:
     _value:
     - _mode: 0
       _feature: 0
-      _state: 0
+      _state: 2
   _indexFeatureConfigs:
     _value:
     - _mode: 0
@@ -37,4 +37,4 @@ MonoBehaviour:
     _value:
     - _mode: 0
       _feature: 0
-      _state: 0
+      _state: 2
