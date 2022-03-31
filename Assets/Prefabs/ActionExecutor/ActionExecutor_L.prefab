@@ -56,7 +56,7 @@ MonoBehaviour:
   _gustAction: {fileID: 11400000, guid: 7f00e86749f14dd469ef1d5322d71583, type: 2}
   _lineRenderer: {fileID: 0}
   _shootProjectile: {fileID: 0}
-  _fireProjectile: {fileID: 2682301301961842445, guid: 8b9b46a590814154ebf13380e6652dca,
+  _fireProjectile: {fileID: 3356542801603858544, guid: 8b9b46a590814154ebf13380e6652dca,
     type: 3}
   fireProjectileSpeed: 5
   _earthPrisonProjectile: {fileID: -5849656509236969547, guid: e87de10ee7e7a6946b8ae3b675fd2873,
