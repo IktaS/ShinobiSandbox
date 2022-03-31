@@ -21,16 +21,17 @@ public class GustProjectile : Projectile
         return "Gust";
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision c)
     {
-        if (layerMask == (layerMask | (1 << other.gameObject.layer)))
+        if (layerMask == (layerMask | (1 << c.gameObject.layer)) && c.contacts.Length > 0)
         {
-            EasyObjectPool.instance.ReturnObjectToPool(gameObject);
-            Rigidbody otherRB = other.GetComponent<Rigidbody>();
+            var contactPoint = c.GetContact(0);
+            Rigidbody otherRB = contactPoint.thisCollider.gameObject.GetComponent<Rigidbody>();
             if (otherRB != null)
             {
                 otherRB.AddForce(rb.velocity.normalized * power, ForceMode.Impulse);
             }
+            ReturnGameObject(contactPoint.point, contactPoint.normal);
         }
     }
 }

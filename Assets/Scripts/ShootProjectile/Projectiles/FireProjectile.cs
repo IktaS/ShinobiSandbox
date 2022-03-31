@@ -20,11 +20,12 @@ public class FireProjectile : Projectile
         return "Fireball";
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision c)
     {
-        if (layerMask == (layerMask | (1 << other.gameObject.layer)))
+        if (layerMask == (layerMask | (1 << c.gameObject.layer)) && c.contacts.Length > 0)
         {
-            EasyObjectPool.instance.ReturnObjectToPool(gameObject);
+            var contactPoint = c.GetContact(0);
+            ReturnGameObject(contactPoint.point, contactPoint.normal);
         }
     }
 }

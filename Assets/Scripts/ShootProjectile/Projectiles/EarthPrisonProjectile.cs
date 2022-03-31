@@ -28,7 +28,6 @@ public class EarthPrisonProjectile : Projectile
         if (layerMask == (layerMask | (1 << c.gameObject.layer)) && c.contacts.Length > 0)
         {
             var contactPoint = c.GetContact(0);
-            Debug.DrawRay(contactPoint.point, contactPoint.normal * 100, Color.cyan, 10000f);
             var go = EasyObjectPool.instance.GetObjectFromPool(
                 earthPrisonGOPoolName,
                 contactPoint.point,
@@ -40,7 +39,7 @@ public class EarthPrisonProjectile : Projectile
             {
                 queue.addEarthPrison(ep);
             }
-            EasyObjectPool.instance.ReturnObjectToPool(gameObject);
+            ReturnGameObject(contactPoint.point, contactPoint.normal);
         }
     }
 }

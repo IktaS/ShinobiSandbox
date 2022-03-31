@@ -5,21 +5,41 @@ using MarchingBytes;
 
 public class EarthPrison : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private GameObject placementObject;
+    [SerializeField] private GameObject prisonObject;
+    [SerializeField] private float removeDelay;
+    [SerializeField] private float raiseAmount;
+    [SerializeField] private float raiseTime;
     public void Activate()
     {
-        Debug.Log("Activating earth prison in :" + transform.position + ":" + transform.rotation);
+        placementObject.SetActive(false);
+        prisonObject.SetActive(true);
+        var newPos = transform.position + transform.up * raiseAmount;
+        StartCoroutine(MoveToPos(newPos, raiseTime));
+        Invoke("ReturnGO", removeDelay);
+    }
+
+    IEnumerator MoveToPos(Vector3 position, float time)
+    {
+        float elapsedTime = 0;
+        var currentPos = rb.position;
+
+        while (elapsedTime < time)
+        {
+            Vector3 newPos = Vector3.Lerp(currentPos, position, (elapsedTime / time));
+            elapsedTime += Time.deltaTime;
+            rb.MovePosition(newPos);
+
+            yield return null;
+        }
+        rb.MovePosition(position);
+        yield return null;
+    }
+
+    private void ReturnGO()
+    {
         EasyObjectPool.instance.ReturnObjectToPool(gameObject);
+        placementObject.SetActive(true);
     }
 }

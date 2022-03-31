@@ -7,7 +7,7 @@
         {
             "name": "Unity Editor",
             "type": "unity",
-            "path": "/E:/Projects/Unity/VR-Hand-Gesture/Library/EditorInstance.json",
+            "path": "/E:/Projects/Unity/Shinobi-Sandbox/Library/EditorInstance.json",
             "request": "launch"
         },
         {

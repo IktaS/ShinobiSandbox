@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3248862294779890903}
   - component: {fileID: 4813777064274380336}
   - component: {fileID: -4789914369379771800}
-  - component: {fileID: -3435552942322269128}
   m_Layer: 0
   m_Name: Lightning
   m_TagString: Untagged
@@ -75,25 +74,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767af4ad58bf1f8498f43398e87a6075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 4813777064274380336}
-  offset: 0
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 64
---- !u!114 &-3435552942322269128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580466121613387547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acd27932048c3254597a02078fa2cb26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   impactParticle: {fileID: 121496, guid: 5e8a137808d7d374487f34e236c723db, type: 3}
   projectileParticle: {fileID: 163948, guid: 153ff601b9ac43240921bf65f009e220, type: 3}
   muzzleParticle: {fileID: 170656, guid: 0d5c766eef271384bab79cf527f98264, type: 3}
   colliderRadius: 0.1
   collideOffset: 0.1
+  rb: {fileID: 4813777064274380336}
+  offset: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64

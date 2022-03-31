@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1894252051427459801}
   - component: {fileID: 8471837710667532350}
   - component: {fileID: -5849656509236969547}
-  - component: {fileID: 2925915388518777048}
   m_Layer: 0
   m_Name: EarthPrisonProj
   m_TagString: Untagged
@@ -75,6 +74,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47fcf835cd93f6f45b21cd3707a9cc08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impactParticle: {fileID: 175196, guid: a4ae1c79c8256e84d8a5d48ee87b61b7, type: 3}
+  projectileParticle: {fileID: 137516, guid: fc1e98ca9a0339546a008f54084df581, type: 3}
+  muzzleParticle: {fileID: 102132, guid: 806d0ee38ca88074fba80d166fdc96ad, type: 3}
+  colliderRadius: 0.1
+  collideOffset: 0.1
   rb: {fileID: 8471837710667532350}
   offset: 0
   layerMask:
@@ -82,20 +86,3 @@ MonoBehaviour:
     m_Bits: 384
   queue: {fileID: 11400000, guid: 3e504338ddeb20d45b4aa2c725657e6d, type: 2}
   earthPrisonGOPoolName: EarthPrison
---- !u!114 &2925915388518777048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7786011469751363861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acd27932048c3254597a02078fa2cb26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  impactParticle: {fileID: 175196, guid: a4ae1c79c8256e84d8a5d48ee87b61b7, type: 3}
-  projectileParticle: {fileID: 137516, guid: fc1e98ca9a0339546a008f54084df581, type: 3}
-  muzzleParticle: {fileID: 102132, guid: 806d0ee38ca88074fba80d166fdc96ad, type: 3}
-  colliderRadius: 0.1
-  collideOffset: 0.1

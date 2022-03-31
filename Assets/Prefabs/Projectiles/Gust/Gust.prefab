@@ -75,6 +75,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6059d52336e3d43bbe3c0aaad4043c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impactParticle: {fileID: 1873985756121678, guid: 5f6d6d77f4d0d074a8033eac55e37e4b,
+    type: 3}
+  projectileParticle: {fileID: 1143787252086882, guid: 13fb3d7a7b6f33344af2d0742849ab6c,
+    type: 3}
+  muzzleParticle: {fileID: 1751010978416606, guid: 71052c1e9d47774439ae2a30c4489596,
+    type: 3}
+  colliderRadius: 0.1
+  collideOffset: 0.1
   rb: {fileID: 4608166279331881272}
   offset: 0
   layerMask:
