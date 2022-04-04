@@ -17,11 +17,12 @@ public abstract class Projectile : MonoBehaviour
 
     protected void Start()
     {
-        projectileParticle = Instantiate(projectileParticle, transform.position, transform.rotation) as GameObject;
-        projectileParticle.transform.parent = transform;
+        projectileParticle = Instantiate(projectileParticle, transform.position, transform.rotation, transform) as GameObject;
+        projectileParticle.transform.localScale = transform.localScale;
         if (muzzleParticle)
         {
             muzzleParticle = Instantiate(muzzleParticle, transform.position, transform.rotation) as GameObject;
+            muzzleParticle.transform.localScale = transform.localScale;
             Destroy(muzzleParticle, 1.5f); // 2nd parameter is lifetime of effect in seconds
         }
     }
@@ -39,6 +40,7 @@ public abstract class Projectile : MonoBehaviour
         transform.position = position + (normal * collideOffset); // Move projectile to point of collision
 
         GameObject impactP = Instantiate(impactParticle, transform.position, Quaternion.FromToRotation(Vector3.up, normal)) as GameObject; // Spawns impact effect
+        impactP.transform.localScale = transform.localScale;
 
         ParticleSystem[] trails = GetComponentsInChildren<ParticleSystem>(); // Gets a list of particle systems, as we need to detach the trails
                                                                              //Component at [0] is that of the parent i.e. this object (if there is any)
@@ -55,6 +57,6 @@ public abstract class Projectile : MonoBehaviour
 
         Destroy(projectileParticle, 3f); // Removes particle effect after delay
         Destroy(impactP, 3.5f); // Removes impact effect after delay
-        EasyObjectPool.instance.ReturnObjectToPool(gameObject); // Removes the projectile
+        Destroy(gameObject); // Removes the projectile
     }
 }

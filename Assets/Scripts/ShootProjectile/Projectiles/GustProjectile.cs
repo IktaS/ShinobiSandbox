@@ -21,17 +21,22 @@ public class GustProjectile : Projectile
         return "Gust";
     }
 
+    void OnDisable()
+    {
+        rb.AddForce(Vector3.zero, ForceMode.VelocityChange);
+    }
+
     void OnCollisionEnter(Collision c)
     {
+        var contactPoint = c.GetContact(0);
         if (layerMask == (layerMask | (1 << c.gameObject.layer)) && c.contacts.Length > 0)
         {
-            var contactPoint = c.GetContact(0);
-            Rigidbody otherRB = contactPoint.thisCollider.gameObject.GetComponent<Rigidbody>();
-            if (otherRB != null)
+            var enemy = contactPoint.otherCollider.gameObject.GetComponent<Enemy>();
+            if (enemy != null)
             {
-                otherRB.AddForce(rb.velocity.normalized * power, ForceMode.Impulse);
+                enemy.handleProjectileHit(this, rb.velocity.normalized * power);
             }
-            ReturnGameObject(contactPoint.point, contactPoint.normal);
         }
+        ReturnGameObject(contactPoint.point, contactPoint.normal);
     }
 }

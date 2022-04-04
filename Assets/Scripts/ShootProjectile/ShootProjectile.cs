@@ -29,9 +29,9 @@ public class ShootProjectile : MonoBehaviour
         Vector3 dir = dirPoint.position;
         Vector3 start = startPoint.position;
         Vector3 direction = (dir - start).normalized;
-        GameObject go = EasyObjectPool.instance.GetObjectFromPool(currentProjectile.PoolName(), dir, Quaternion.LookRotation(direction, Vector3.up));
-        currentProjectile = go.GetComponent<Projectile>();
-        currentProjectile.Shoot(start, dir, projectileSpeed, maxDistance);
+        GameObject go = Instantiate(currentProjectile.gameObject, dir, Quaternion.LookRotation(direction, Vector3.up));
+        var spawnedProj = go.GetComponent<Projectile>();
+        spawnedProj.Shoot(start, dir, projectileSpeed, maxDistance);
     }
 }
 /*

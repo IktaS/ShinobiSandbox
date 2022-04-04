@@ -23,11 +23,16 @@ public class EarthPrisonProjectile : Projectile
         return "EarthPrisonProj";
     }
 
+    void OnDisable()
+    {
+        rb.AddForce(Vector3.zero, ForceMode.VelocityChange);
+    }
+
     void OnCollisionEnter(Collision c)
     {
+        var contactPoint = c.GetContact(0);
         if (layerMask == (layerMask | (1 << c.gameObject.layer)) && c.contacts.Length > 0)
         {
-            var contactPoint = c.GetContact(0);
             var go = EasyObjectPool.instance.GetObjectFromPool(
                 earthPrisonGOPoolName,
                 contactPoint.point,
@@ -39,7 +44,7 @@ public class EarthPrisonProjectile : Projectile
             {
                 queue.addEarthPrison(ep);
             }
-            ReturnGameObject(contactPoint.point, contactPoint.normal);
         }
+        ReturnGameObject(contactPoint.point, contactPoint.normal);
     }
 }

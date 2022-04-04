@@ -346,11 +346,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8306440404445898196}
   - component: {fileID: 8215868972631621002}
-  - component: {fileID: 8311122286566804581}
-  - component: {fileID: 8311122286566804580}
   - component: {fileID: 8311122286566804582}
   - component: {fileID: 8311122286566804579}
   - component: {fileID: 9206322911783887667}
+  - component: {fileID: 9215590452426081251}
   m_Layer: 6
   m_Name: Polygonal Wolf Black
   m_TagString: Untagged
@@ -407,34 +406,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &8311122286566804581
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8309535014670283558}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.35763288
-  m_Height: 0.94921815
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.4068622, z: -0.2}
---- !u!136 &8311122286566804580
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8309535014670283558}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.35763288
-  m_Height: 0.94921815
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.4068622, z: 0.51784325}
 --- !u!195 &8311122286566804582
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -472,6 +443,7 @@ MonoBehaviour:
   Health: 100
   agent: {fileID: 8311122286566804582}
   animator: {fileID: 8215868972631621002}
+  rb: {fileID: 9206322911783887667}
   playerTag: Player
   updateDestinationRate: 0.1
 --- !u!54 &9206322911783887667
@@ -490,6 +462,20 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!136 &9215590452426081251
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8309535014670283558}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.65
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.5, z: 0.03}
 --- !u!1 &8309548606947546650
 GameObject:
   m_ObjectHideFlags: 0

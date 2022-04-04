@@ -10,6 +10,7 @@ public class Wolf : Enemy
     private Transform target;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator animator;
+    [SerializeField] private Rigidbody rb;
 
     [SerializeField] private string playerTag;
 
@@ -69,5 +70,41 @@ public class Wolf : Enemy
             agent.isStopped = false;
             StartCoroutine(DoAttack());
         }
+    }
+
+    public override void handleProjectileHit(Projectile p, Vector3 power)
+    {
+        if (p is GustProjectile)
+        {
+            Debug.Log("Hit by gust");
+            StopCoroutine(updateDestination());
+            animator.SetBool("Run Forward", false);
+            animator.SetBool("Resting", true);
+            agent.isStopped = true;
+            agent.enabled = false;
+            rb.isKinematic = false;
+            rb.useGravity = true;
+            rb.AddForce(power, ForceMode.Impulse);
+            StartCoroutine(monitorVelocity());
+        }
+        if (p is FireProjectile)
+        {
+            Debug.Log("Hit by fire");
+        }
+        if (p is LightningProjectile)
+        {
+            Debug.Log("Hit by lightning");
+        }
+    }
+
+    IEnumerator monitorVelocity()
+    {
+        yield return new WaitForSeconds(3f);
+        animator.SetBool("Resting", false);
+        rb.isKinematic = true;
+        agent.enabled = true;
+        agent.isStopped = false;
+        rb.useGravity = false;
+        SetRunAround();
     }
 }

@@ -20,12 +20,22 @@ public class FireProjectile : Projectile
         return "Fireball";
     }
 
+    void OnDisable()
+    {
+        rb.AddForce(Vector3.zero, ForceMode.VelocityChange);
+    }
+
     void OnCollisionEnter(Collision c)
     {
+        var contactPoint = c.GetContact(0);
         if (layerMask == (layerMask | (1 << c.gameObject.layer)) && c.contacts.Length > 0)
         {
-            var contactPoint = c.GetContact(0);
-            ReturnGameObject(contactPoint.point, contactPoint.normal);
+            var enemy = contactPoint.otherCollider.gameObject.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.handleProjectileHit(this, rb.velocity.normalized);
+            }
         }
+        ReturnGameObject(contactPoint.point, contactPoint.normal);
     }
 }
