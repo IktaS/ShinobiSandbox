@@ -52,7 +52,6 @@ public class Wolf : Enemy
     {
         if (wr != null)
         {
-            StopCoroutine(updateDestination());
             target = wr.trueTarget;
         }
     }
@@ -73,20 +72,13 @@ public class Wolf : Enemy
         }
     }
 
-    public override void handleProjectileHit(Projectile p, Vector3 power)
+    public override void HitByProjectile(Projectile p, Vector3 power)
     {
         if (p is GustProjectile)
         {
             Debug.Log("Hit by gust");
             StopCoroutine(updateDestination());
-            animator.SetBool("Run Forward", false);
-            animator.SetBool("Resting", true);
-            agent.isStopped = true;
-            agent.enabled = false;
-            rb.isKinematic = false;
-            rb.useGravity = true;
-            rb.AddForce(power, ForceMode.Impulse);
-            StartCoroutine(monitorVelocity());
+            StartCoroutine(ragdollByGust(power));
         }
         if (p is FireProjectile)
         {
@@ -98,8 +90,15 @@ public class Wolf : Enemy
         }
     }
 
-    IEnumerator monitorVelocity()
+    IEnumerator ragdollByGust(Vector3 power)
     {
+        animator.SetBool("Run Forward", false);
+        animator.SetBool("Resting", true);
+        agent.isStopped = true;
+        agent.enabled = false;
+        rb.isKinematic = false;
+        rb.useGravity = true;
+        rb.AddForce(power, ForceMode.Impulse);
         yield return new WaitForSeconds(3f);
         animator.SetBool("Resting", false);
         rb.isKinematic = true;

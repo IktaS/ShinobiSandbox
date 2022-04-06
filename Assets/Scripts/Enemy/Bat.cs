@@ -51,17 +51,13 @@ public class Bat : Enemy
             });
     }
 
-    public override void handleProjectileHit(Projectile p, Vector3 power)
+    public override void HitByProjectile(Projectile p, Vector3 power)
     {
         if (p is GustProjectile)
         {
             Debug.Log("Hit by gust");
             seq.Kill();
-            animator.SetBool("Fly Forward", false);
-            rb.isKinematic = false;
-            rb.useGravity = true;
-            rb.AddForce(power, ForceMode.Impulse);
-            StartCoroutine(monitorVelocity());
+            StartCoroutine(ragdollByGust(power));
         }
         if (p is FireProjectile)
         {
@@ -73,8 +69,12 @@ public class Bat : Enemy
         }
     }
 
-    IEnumerator monitorVelocity()
+    IEnumerator ragdollByGust(Vector3 power)
     {
+        animator.SetBool("Fly Forward", false);
+        rb.isKinematic = false;
+        rb.useGravity = true;
+        rb.AddForce(power, ForceMode.Impulse);
         yield return new WaitForSeconds(3f);
         rb.isKinematic = true;
         rb.useGravity = false;

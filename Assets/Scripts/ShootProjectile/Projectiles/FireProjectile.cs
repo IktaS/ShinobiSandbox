@@ -30,10 +30,10 @@ public class FireProjectile : Projectile
         var contactPoint = c.GetContact(0);
         if (layerMask == (layerMask | (1 << c.gameObject.layer)) && c.contacts.Length > 0)
         {
-            var enemy = contactPoint.otherCollider.gameObject.GetComponent<Enemy>();
+            var enemy = contactPoint.otherCollider.gameObject.GetComponent<IProjectileHittable>();
             if (enemy != null)
             {
-                enemy.handleProjectileHit(this, rb.velocity.normalized);
+                enemy.HitByProjectile(this, rb.velocity.normalized);
             }
         }
         ReturnGameObject(contactPoint.point, contactPoint.normal);

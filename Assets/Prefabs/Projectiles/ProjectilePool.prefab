@@ -44,23 +44,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolInfo:
-  - poolName: Fireball
-    prefab: {fileID: 5438842783721000156, guid: 8b9b46a590814154ebf13380e6652dca, type: 3}
-    poolSize: 10
-    fixedSize: 0
-  - poolName: Lightning
-    prefab: {fileID: 6580466121613387547, guid: aefd63d3265f6f4438cd913b4e05ea4e, type: 3}
-    poolSize: 10
-    fixedSize: 0
-  - poolName: Gust
-    prefab: {fileID: 2768593909738094611, guid: 87c2649f5d9e16c4191c0f03e8c5a6af, type: 3}
-    poolSize: 10
-    fixedSize: 0
-  - poolName: EarthPrisonProj
-    prefab: {fileID: 7786011469751363861, guid: e87de10ee7e7a6946b8ae3b675fd2873, type: 3}
-    poolSize: 10
-    fixedSize: 0
   - poolName: EarthPrison
-    prefab: {fileID: 4368933139496913706, guid: 1e7ac4370ba052842942a2472e3e57b1, type: 3}
+    prefab: {fileID: 4368933139496913706, guid: 1e7ac4370ba052842942a2472e3e57b1,
+      type: 3}
+    poolSize: 10
+    fixedSize: 0
+  - poolName: Wolf
+    prefab: {fileID: 8309535014670283558, guid: 66232050c6f07d44887f992bf950067a,
+      type: 3}
+    poolSize: 10
+    fixedSize: 0
+  - poolName: Bat
+    prefab: {fileID: 3860198554930699717, guid: 197970288204a6a458fee2ba17a4b1b0,
+      type: 3}
+    poolSize: 10
+    fixedSize: 0
+  - poolName: Bomb
+    prefab: {fileID: 3255576978113612791, guid: 25874f3aa046e494697e6a5a631b9cbe,
+      type: 3}
     poolSize: 10
     fixedSize: 0

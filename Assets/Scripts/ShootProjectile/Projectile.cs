@@ -60,3 +60,8 @@ public abstract class Projectile : MonoBehaviour
         Destroy(gameObject); // Removes the projectile
     }
 }
+
+public interface IProjectileHittable
+{
+    public void HitByProjectile(Projectile p, Vector3 power);
+}
