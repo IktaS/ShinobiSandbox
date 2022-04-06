@@ -16,8 +16,9 @@ public class Wolf : Enemy
 
     [SerializeField] private float updateDestinationRate = 0.5f;
 
-    new public void Spawn()
+    public override void Spawn(Vector3 spawnPos)
     {
+        rb.MovePosition(spawnPos);
         SetRunAround();
     }
 

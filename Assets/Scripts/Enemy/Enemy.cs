@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float Health;
-    public void Spawn() { }
+    public virtual void Spawn(Vector3 spawnPos) { }
 
     public virtual void handleProjectileHit(Projectile p, Vector3 power)
     {

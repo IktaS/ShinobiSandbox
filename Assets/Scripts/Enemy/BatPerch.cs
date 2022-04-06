@@ -8,6 +8,8 @@ public class BatPerch : MonoBehaviour
     [SerializeField] private float yOffset;
     [SerializeField] private int maxNode;
 
+    public Transform trueTarget;
+
     private List<GameObject> nodes = new List<GameObject>();
 
     void Start()
@@ -22,5 +24,11 @@ public class BatPerch : MonoBehaviour
             node.transform.position = transform.position + point;
             node.transform.SetParent(transform);
         }
+    }
+
+    public Transform GetNode()
+    {
+        var nodeNum = Random.Range(0, maxNode);
+        return nodes[nodeNum].transform;
     }
 }
