@@ -14,6 +14,12 @@ public abstract class Projectile : MonoBehaviour
     public float collideOffset = 0.15f;
     public abstract string PoolName();
     public abstract void Shoot(Vector3 start, Vector3 dir, float speed, float distance);
+    [SerializeField] private float damage;
+
+    public float GetDamage()
+    {
+        return damage;
+    }
 
     protected void Start()
     {

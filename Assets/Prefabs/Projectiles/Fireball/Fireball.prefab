@@ -81,6 +81,7 @@ MonoBehaviour:
   muzzleParticle: {fileID: 193574, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
   colliderRadius: 0.1
   collideOffset: 0.1
+  damage: 50
   rb: {fileID: 5973423597205482999}
   offset: 0
   layerMask:

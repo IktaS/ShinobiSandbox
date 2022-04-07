@@ -2,16 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WolfRotation : MonoBehaviour
+public class WolfRotation : NodeRepository
 {
-    [SerializeField] private int MaxNodeNum;
     [SerializeField] private float radius;
+
     [SerializeField] private float rotationRate;
-
-    public Transform trueTarget;
-
-    private List<GameObject> nodes = new List<GameObject>();
-
     void Start()
     {
         for (int i = 0; i < MaxNodeNum; i++)
@@ -22,12 +17,6 @@ public class WolfRotation : MonoBehaviour
             node.transform.SetParent(transform);
             transform.RotateAround(transform.position, Vector3.up, 360 / MaxNodeNum);
         }
-    }
-
-    public Transform GetNode()
-    {
-        var nodeNum = Random.Range(0, MaxNodeNum);
-        return nodes[nodeNum].transform;
     }
 
     void FixedUpdate()

@@ -15,9 +15,12 @@ public class Wolf : Enemy
     [SerializeField] private string playerTag;
 
     [SerializeField] private float updateDestinationRate = 0.5f;
+    [SerializeField] private float attackChance = 0.1f;
+    [SerializeField] private float attackChanceTick = 30f;
 
     public override void Spawn(Vector3 spawnPos)
     {
+        base.Spawn(spawnPos);
         rb.MovePosition(spawnPos);
         SetRunAround();
     }
@@ -30,11 +33,38 @@ public class Wolf : Enemy
             this.wr = go.GetComponent<WolfRotation>();
         }
         target = wr.GetNode();
+        if (target == null)
+        {
+            return;
+        }
         animator.SetBool("Run Forward", true);
         agent.isStopped = false;
-        StartCoroutine(updateDestination());
+        updateDestinationCoroutine = StartCoroutine(updateDestination());
+        randomAttackCoroutine = StartCoroutine(randomlyAttack());
     }
 
+    void StopRunAround()
+    {
+        if (randomAttackCoroutine != null) StopCoroutine(randomAttackCoroutine);
+        if (updateDestinationCoroutine != null) StopCoroutine(updateDestinationCoroutine);
+    }
+
+    private Coroutine randomAttackCoroutine;
+    IEnumerator randomlyAttack()
+    {
+        for (; ; )
+        {
+            var rand = Random.Range(0f, 1f);
+            if (rand < attackChance)
+            {
+                SetAttackPlayer();
+                yield break;
+            }
+            yield return new WaitForSeconds(attackChanceTick);
+        }
+    }
+
+    private Coroutine updateDestinationCoroutine;
     IEnumerator updateDestination()
     {
         for (; ; )
@@ -52,7 +82,7 @@ public class Wolf : Enemy
     {
         if (wr != null)
         {
-            target = wr.trueTarget;
+            target = wr.GetTrueTarget();
         }
     }
 
@@ -67,6 +97,7 @@ public class Wolf : Enemy
     {
         if (c.gameObject.tag == playerTag)
         {
+            StopRunAround();
             agent.isStopped = false;
             StartCoroutine(DoAttack());
         }
@@ -74,10 +105,11 @@ public class Wolf : Enemy
 
     public override void HitByProjectile(Projectile p, Vector3 power)
     {
+        TakeDamage(p.GetDamage());
         if (p is GustProjectile)
         {
             Debug.Log("Hit by gust");
-            StopCoroutine(updateDestination());
+            StopRunAround();
             StartCoroutine(ragdollByGust(power));
         }
         if (p is FireProjectile)

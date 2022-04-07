@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour, IProjectileHittable
+public class Player : Entity, IProjectileHittable
 {
     public virtual void HitByProjectile(Projectile p, Vector3 power)
     {

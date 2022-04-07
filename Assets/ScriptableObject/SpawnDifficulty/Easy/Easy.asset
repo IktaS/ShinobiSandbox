@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e8349b083e85345ad6e248329ede03, type: 3}
+  m_Name: Easy
+  m_EditorClassIdentifier: 
+  seed: -1
+  wolf: {fileID: 11400000, guid: 563bee495031f7c46a53d3be7fc99788, type: 2}
+  bat: {fileID: 11400000, guid: 2d3a88f80fefc02419e6fce65a970421, type: 2}
+  bomb: {fileID: 11400000, guid: 36992c06ec9723d4ebe699bbd0679456, type: 2}
+  nextDifficultyTimer: 360

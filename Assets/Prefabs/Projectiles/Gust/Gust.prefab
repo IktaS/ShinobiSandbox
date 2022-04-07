@@ -82,6 +82,7 @@ MonoBehaviour:
     type: 3}
   colliderRadius: 0.1
   collideOffset: 0.1
+  damage: 5
   rb: {fileID: 4608166279331881272}
   offset: 0
   layerMask:

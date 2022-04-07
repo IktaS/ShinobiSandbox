@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Bomb : Enemy
 {
-    private WolfRotation wr;
+    private NodeRepository nr;
 
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator animator;
@@ -13,23 +13,29 @@ public class Bomb : Enemy
 
     public override void Spawn(Vector3 spawnPos)
     {
+        base.Spawn(spawnPos);
         rb.MovePosition(spawnPos);
         SetChasePlayer();
     }
 
     void SetChasePlayer()
     {
-        if (wr == null)
+        if (nr == null)
         {
-            var go = GameObject.Find("WolfRotation");
-            this.wr = go.GetComponent<WolfRotation>();
+            var go = GameObject.FindObjectOfType<NodeRepository>();
+            this.nr = go.GetComponent<NodeRepository>();
         }
-        var target = wr.trueTarget;
+        var target = nr.GetTrueTarget();
+        if (target == null)
+        {
+            return;
+        }
         agent.isStopped = false;
         agent.SetDestination(target.position);
     }
     public override void HitByProjectile(Projectile p, Vector3 power)
     {
+        TakeDamage(p.GetDamage());
         if (p is GustProjectile)
         {
             Debug.Log("Hit by gust");

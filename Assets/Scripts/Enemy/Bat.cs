@@ -14,11 +14,13 @@ public class Bat : Enemy
     [SerializeField] private Projectile projectile;
     [SerializeField] private float projectileSpeed;
     [SerializeField] private ShootProjectile shoot;
+    [SerializeField] private float shootMoveAgainDelay;
 
     private Sequence seq;
 
     public override void Spawn(Vector3 spawnPos)
     {
+        base.Spawn(spawnPos);
         rb.MovePosition(spawnPos);
         SetMoveAround();
     }
@@ -32,27 +34,30 @@ public class Bat : Enemy
         }
         rb.isKinematic = true;
         target = bp.GetNode();
+        if (target == null)
+        {
+            return;
+        }
         animator.SetBool("Fly Forward", true);
         var duration = Vector3.Distance(target.position, rb.position) / speed;
-        if (seq == null)
-        {
-            seq = DOTween.Sequence();
-        }
-        else
+        if (seq != null)
         {
             seq.Kill();
         }
-        transform.LookAt(target.position, Vector3.up);
+        transform.DOLookAt(target.position, 0f, AxisConstraint.None, Vector3.up);
+        seq = DOTween.Sequence();
         seq.Append(rb.DOMove(target.position, duration)).
-            OnComplete(() =>
+            Append(transform.DOLookAt(bp.GetTrueTarget().position, 2f, AxisConstraint.None, Vector3.up)).
+            AppendCallback(() =>
             {
-                transform.LookAt(bp.trueTarget.position, Vector3.up);
                 shoot.Shoot(projectile, projectileSpeed);
-            });
+            }).AppendInterval(shootMoveAgainDelay).OnComplete(() => SetMoveAround());
+
     }
 
     public override void HitByProjectile(Projectile p, Vector3 power)
     {
+        TakeDamage(p.GetDamage());
         if (p is GustProjectile)
         {
             Debug.Log("Hit by gust");
