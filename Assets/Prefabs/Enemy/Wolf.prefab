@@ -432,6 +432,7 @@ GameObject:
   - component: {fileID: 8311122286566804579}
   - component: {fileID: 9206322911783887667}
   - component: {fileID: 9215590452426081251}
+  - component: {fileID: 6204440109825561540}
   m_Layer: 6
   m_Name: Wolf
   m_TagString: Untagged
@@ -508,8 +509,8 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.83
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_BaseOffset: -0.25
+  m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
 --- !u!114 &8311122286566804579
 MonoBehaviour:
@@ -532,14 +533,16 @@ MonoBehaviour:
       m_Calls: []
   spawner: {fileID: 0}
   maxHealth: 100
-  deathEffect: {fileID: 119968, guid: e73000b12fb76244cbffd6abbf8bb6e4, type: 3}
+  deathEffect: {fileID: 3528413525601577031, guid: 408cb3eed86edf54f8b5cf1b1e5c2dff,
+    type: 3}
+  target: {fileID: 0}
   agent: {fileID: 8311122286566804582}
   animator: {fileID: 8215868972631621002}
   rb: {fileID: 9206322911783887667}
   playerTag: Player
   updateDestinationRate: 0.1
-  attackChance: 0.2
-  attackChanceTick: 20
+  attackChance: 0.3
+  attackChanceTick: 10
 --- !u!54 &9206322911783887667
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -567,9 +570,23 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1.65
+  m_Height: 2.29112
   m_Direction: 2
-  m_Center: {x: 0, y: 0.5, z: 0.03}
+  m_Center: {x: 0, y: 0.5, z: 0.62989426}
+--- !u!136 &6204440109825561540
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8309535014670283558}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.30169633
+  m_Height: 1.3317125
+  m_Direction: 2
+  m_Center: {x: -0.0030028026, y: 0.63278353, z: 0.18914366}
 --- !u!1 &8309548606947546650
 GameObject:
   m_ObjectHideFlags: 0

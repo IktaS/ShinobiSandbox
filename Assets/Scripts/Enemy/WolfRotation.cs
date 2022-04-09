@@ -5,7 +5,6 @@ using UnityEngine;
 public class WolfRotation : NodeRepository
 {
     [SerializeField] private float radius;
-
     [SerializeField] private float rotationRate;
     void Start()
     {

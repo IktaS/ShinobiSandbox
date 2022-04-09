@@ -392,8 +392,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3255576978113612791}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.9926605, y: 0.07059097, z: -5.7835875}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 3255576978113255381}
   - {fileID: 3255576978113255379}
@@ -437,8 +437,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 2
+  m_Acceleration: 999
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -446,7 +446,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1.05
-  m_BaseOffset: -0.47
+  m_BaseOffset: -0.8
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!54 &4377167672893331487
@@ -499,10 +499,17 @@ MonoBehaviour:
       m_Calls: []
   spawner: {fileID: 0}
   maxHealth: 1000000
-  deathEffect: {fileID: 119968, guid: e73000b12fb76244cbffd6abbf8bb6e4, type: 3}
+  deathEffect: {fileID: 4025443505340966777, guid: ad06955b9be984b4ab04183d0db9cb4a,
+    type: 3}
   agent: {fileID: 6224690343677348331}
   animator: {fileID: 3255576978123110455}
   rb: {fileID: 4377167672893331487}
+  explodeTimer: 9
+  explosionRadius: 5
+  explosionLayerMask:
+    serializedVersion: 2
+    m_Bits: 72
+  explosionDamage: 40
 --- !u!1 &3255576978113612793
 GameObject:
   m_ObjectHideFlags: 0

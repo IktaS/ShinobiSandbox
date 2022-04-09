@@ -15,6 +15,7 @@ public class Enemy : Entity, IProjectileHittable
     public virtual void Spawn(Vector3 spawnPos)
     {
         health = maxHealth;
+        isDeath = false;
     }
 
     public virtual void HitByProjectile(Projectile p, Vector3 power)
@@ -22,15 +23,9 @@ public class Enemy : Entity, IProjectileHittable
         Debug.Log("hit by " + p.name);
     }
 
-    public virtual void TakeDamage(float damage)
-    {
-        health = health - damage;
-    }
-
     protected virtual void Die()
     {
         GameObject impactP = Instantiate(deathEffect, transform.position, Quaternion.FromToRotation(Vector3.up, transform.up)) as GameObject; // Spawns impact effect
-        impactP.transform.localScale = transform.localScale;
         Destroy(impactP, 3.5f); // Removes impact effect after delay
         if (spawner != null)
         {

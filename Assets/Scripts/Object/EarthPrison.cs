@@ -11,6 +11,11 @@ public class EarthPrison : MonoBehaviour
     [SerializeField] private float removeDelay;
     [SerializeField] private float raiseAmount;
     [SerializeField] private float raiseTime;
+
+    public void OnEnable()
+    {
+        prisonObject.SetActive(false);
+    }
     public void Activate()
     {
         placementObject.SetActive(false);

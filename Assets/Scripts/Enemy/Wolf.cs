@@ -7,7 +7,7 @@ using NaughtyAttributes;
 public class Wolf : Enemy
 {
     private WolfRotation wr;
-    private Transform target;
+    [SerializeField] private Transform target;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody rb;
@@ -29,27 +29,22 @@ public class Wolf : Enemy
     {
         if (wr == null)
         {
-            var go = GameObject.Find("WolfRotation");
-            this.wr = go.GetComponent<WolfRotation>();
+            wr = GameObject.FindObjectOfType<WolfRotation>();
         }
         target = wr.GetNode();
-        if (target == null)
-        {
-            return;
-        }
         animator.SetBool("Run Forward", true);
-        agent.isStopped = false;
-        updateDestinationCoroutine = StartCoroutine(updateDestination());
         randomAttackCoroutine = StartCoroutine(randomlyAttack());
     }
 
-    void StopRunAround()
+    void FixedUpdate()
     {
-        if (randomAttackCoroutine != null) StopCoroutine(randomAttackCoroutine);
-        if (updateDestinationCoroutine != null) StopCoroutine(updateDestinationCoroutine);
+        if (!agent.isStopped)
+        {
+            agent.SetDestination(target.position);
+        }
     }
 
-    private Coroutine randomAttackCoroutine;
+    [SerializeField] private Coroutine randomAttackCoroutine;
     IEnumerator randomlyAttack()
     {
         for (; ; )
@@ -58,47 +53,39 @@ public class Wolf : Enemy
             if (rand < attackChance)
             {
                 SetAttackPlayer();
+                randomAttackCoroutine = null;
                 yield break;
             }
             yield return new WaitForSeconds(attackChanceTick);
         }
     }
 
-    private Coroutine updateDestinationCoroutine;
-    IEnumerator updateDestination()
-    {
-        for (; ; )
-        {
-            if (target != null)
-            {
-                agent.SetDestination(target.position);
-            }
-            yield return new WaitForSeconds(updateDestinationRate);
-        }
-    }
-
     [Button]
     void SetAttackPlayer()
     {
-        if (wr != null)
+        if (wr == null)
         {
-            target = wr.GetTrueTarget();
+            wr = GameObject.FindObjectOfType<WolfRotation>();
         }
+        target = wr.GetTrueTarget();
+        if (randomAttackCoroutine != null) StopCoroutine(randomAttackCoroutine);
     }
 
     IEnumerator DoAttack()
     {
         animator.SetTrigger("Bite Attack");
+        agent.isStopped = true;
+        agent.velocity = Vector3.zero;
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        agent.isStopped = false;
         SetRunAround();
     }
 
-    void OnCollisionEnter(Collision c)
+    void OnTriggerEnter(Collider other)
     {
-        if (c.gameObject.tag == playerTag)
+        if (other.gameObject.tag == playerTag)
         {
-            StopRunAround();
-            agent.isStopped = false;
+
             StartCoroutine(DoAttack());
         }
     }
@@ -108,17 +95,7 @@ public class Wolf : Enemy
         TakeDamage(p.GetDamage());
         if (p is GustProjectile)
         {
-            Debug.Log("Hit by gust");
-            StopRunAround();
             StartCoroutine(ragdollByGust(power));
-        }
-        if (p is FireProjectile)
-        {
-            Debug.Log("Hit by fire");
-        }
-        if (p is LightningProjectile)
-        {
-            Debug.Log("Hit by lightning");
         }
     }
 

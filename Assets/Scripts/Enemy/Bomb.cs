@@ -11,11 +11,23 @@ public class Bomb : Enemy
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody rb;
 
+    [SerializeField] private float explodeTimer;
+    [SerializeField] private float explosionRadius;
+    [SerializeField] private LayerMask explosionLayerMask;
+    [SerializeField] private float explosionDamage;
+
     public override void Spawn(Vector3 spawnPos)
     {
         base.Spawn(spawnPos);
         rb.MovePosition(spawnPos);
         SetChasePlayer();
+        StartCoroutine(explodeAfterDelay(explodeTimer));
+    }
+
+    IEnumerator explodeAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Explode();
     }
 
     void SetChasePlayer()
@@ -41,14 +53,6 @@ public class Bomb : Enemy
             Debug.Log("Hit by gust");
             StartCoroutine(ragdollByGust(power));
         }
-        if (p is FireProjectile)
-        {
-            Debug.Log("Hit by fire");
-        }
-        if (p is LightningProjectile)
-        {
-            Debug.Log("Hit by lightning");
-        }
     }
 
     IEnumerator ragdollByGust(Vector3 power)
@@ -64,5 +68,25 @@ public class Bomb : Enemy
         agent.isStopped = false;
         rb.useGravity = false;
         SetChasePlayer();
+    }
+
+    void Explode()
+    {
+        var colliders = Physics.OverlapSphere(transform.position, explosionRadius, explosionLayerMask);
+
+        foreach (var col in colliders)
+        {
+            var isHit = Physics.Raycast(transform.position, col.ClosestPoint(transform.position), explosionRadius);
+            if (isHit)
+            {
+                var entity = col.gameObject.GetComponent<Entity>();
+                if (entity != null)
+                {
+                    Debug.Log("find entity " + entity.name);
+                    entity.TakeDamage(explosionDamage);
+                }
+            }
+        }
+        TakeDamage(health);
     }
 }
