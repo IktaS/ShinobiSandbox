@@ -5263,10 +5263,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2741956887399156894}
   - component: {fileID: 4103230310206626811}
-  - component: {fileID: 8489684225810206554}
-  - component: {fileID: 7519851748349324973}
   - component: {fileID: 2741956887399156895}
   - component: {fileID: 2741956887399156892}
+  - component: {fileID: 6619212877153136591}
+  - component: {fileID: 5014065145445451672}
   m_Layer: 3
   m_Name: Aim
   m_TagString: Untagged
@@ -5301,51 +5301,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hand: {fileID: 2966893125793831190}
---- !u!114 &8489684225810206554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2741956887399156893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de76f7169412b8f4896235a1585d8939, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _selector: {fileID: 7519851748349324973}
-  _whenSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7046894363886874523}
-        m_TargetAssemblyTypeName: OculusPoseGestureDetector, Assembly-CSharp
-        m_MethodName: FoundGesture
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 4bedeef7590bf83498f47ba6c2947a05,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: Gesture, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _whenUnselected:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7519851748349324973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2741956887399156893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cd9780be7e512049b4d33d5c9d0ac92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _activeState: {fileID: 2741956887399156895}
 --- !u!114 &2741956887399156895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5376,6 +5331,54 @@ MonoBehaviour:
   _hand: {fileID: 4103230310206626811}
   _shapes:
   - {fileID: 11400000, guid: 835906e4edb04a141b396e9ede22f926, type: 2}
+--- !u!114 &6619212877153136591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2741956887399156893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c59efc99f9ae3b4d9687e9b87fad7dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activeState: {fileID: 2741956887399156895}
+--- !u!114 &5014065145445451672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2741956887399156893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a75a7b227ade74d931f4b50c8d7985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selector: {fileID: 6619212877153136591}
+  _whenSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnselected:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenStay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7046894363886874523}
+        m_TargetAssemblyTypeName: OculusPoseGestureDetector, Assembly-CSharp
+        m_MethodName: FoundGesture
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 4bedeef7590bf83498f47ba6c2947a05,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: Gesture, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2765906876227176041
 GameObject:
   m_ObjectHideFlags: 0
@@ -10038,6 +10041,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81760f63a1eb3204a852c3e45f483bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleDelay: 1000
+  idleGesture: {fileID: 11400000, guid: d5f892ca534bdf04890d00fe5f25f713, type: 2}
 --- !u!1 &4196539621388304160
 GameObject:
   m_ObjectHideFlags: 0
@@ -12901,10 +12906,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6862368608134104452}
   - component: {fileID: 4738066757653598945}
-  - component: {fileID: 927757415789315648}
-  - component: {fileID: 1254962730478790583}
   - component: {fileID: 6862368608134104453}
   - component: {fileID: 6862368608134104454}
+  - component: {fileID: 1787784702649065846}
+  - component: {fileID: 7059191346196959169}
   m_Layer: 3
   m_Name: Aim
   m_TagString: Untagged
@@ -12939,51 +12944,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hand: {fileID: 1475712582114576303}
---- !u!114 &927757415789315648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6862368608134104455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de76f7169412b8f4896235a1585d8939, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _selector: {fileID: 1254962730478790583}
-  _whenSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1452749014750350508}
-        m_TargetAssemblyTypeName: OculusPoseGestureDetector, Assembly-CSharp
-        m_MethodName: FoundGesture
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 4bedeef7590bf83498f47ba6c2947a05,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: Gesture, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _whenUnselected:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1254962730478790583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6862368608134104455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cd9780be7e512049b4d33d5c9d0ac92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _activeState: {fileID: 6862368608134104453}
 --- !u!114 &6862368608134104453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13014,6 +12974,54 @@ MonoBehaviour:
   _hand: {fileID: 4738066757653598945}
   _shapes:
   - {fileID: 11400000, guid: 835906e4edb04a141b396e9ede22f926, type: 2}
+--- !u!114 &1787784702649065846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6862368608134104455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c59efc99f9ae3b4d9687e9b87fad7dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activeState: {fileID: 2741956887399156895}
+--- !u!114 &7059191346196959169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6862368608134104455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a75a7b227ade74d931f4b50c8d7985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selector: {fileID: 6619212877153136591}
+  _whenSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnselected:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenStay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1452749014750350508}
+        m_TargetAssemblyTypeName: OculusPoseGestureDetector, Assembly-CSharp
+        m_MethodName: FoundGesture
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 4bedeef7590bf83498f47ba6c2947a05,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: Gesture, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6899072021350656832
 GameObject:
   m_ObjectHideFlags: 0
@@ -14986,6 +14994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81760f63a1eb3204a852c3e45f483bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleDelay: 1000
+  idleGesture: {fileID: 11400000, guid: d5f892ca534bdf04890d00fe5f25f713, type: 2}
 --- !u!1 &8468967736312775872
 GameObject:
   m_ObjectHideFlags: 0
@@ -16140,7 +16150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9061466416447953298
 Transform:
   m_ObjectHideFlags: 0
