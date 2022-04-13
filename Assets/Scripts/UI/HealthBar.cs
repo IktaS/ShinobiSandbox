@@ -63,6 +63,9 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
-        canvas.transform.LookAt(playerPos.position, Vector3.up);
+        if (playerPos != null)
+        {
+            canvas.transform.LookAt(playerPos.position, Vector3.up);
+        }
     }
 }

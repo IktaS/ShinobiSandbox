@@ -6,21 +6,26 @@ public class IdleNode : DFANode
     private AimNode _aimNode;
     private RecoverNode _recoverNode;
 
+    private ComboActionQueue _queue;
+
     public IdleNode(
         ShieldNode shieldNode,
         EarthPrisonNode earthPrisonNode,
         AimNode aimNode,
-        RecoverNode recoverNode
+        RecoverNode recoverNode,
+        ComboActionQueue queue
     )
     {
         _shieldNode = shieldNode;
         _earthPrisonNode = earthPrisonNode;
         _aimNode = aimNode;
         _recoverNode = recoverNode;
+        _queue = queue;
     }
 
     public override void enterNode(ComboActionCaller caller, DFANode prevNode)
     {
+        _queue.queue.Enqueue(new ComboActionQueueMessage(caller, null));
         return;
     }
 
@@ -38,6 +43,6 @@ public class IdleNode : DFANode
             case GestureType.Aim:
                 return _aimNode;
         }
-        return null;
+        return this;
     }
 }

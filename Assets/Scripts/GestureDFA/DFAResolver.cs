@@ -62,7 +62,8 @@ public class DFAResolver : MonoBehaviour
             _shieldNode,
             _earthPrisonNode,
             _aimNode,
-            _recoverNode
+            _recoverNode,
+            _comboQueue
         );
         currentNode = _idleNode;
     }

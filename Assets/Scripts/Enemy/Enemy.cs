@@ -5,7 +5,6 @@ using UnityEngine;
 public class Enemy : Entity, IProjectileHittable
 {
     public Spawner spawner;
-    [SerializeField] private float maxHealth;
     [SerializeField] private GameObject deathEffect;
 
     void Start()

@@ -31,6 +31,10 @@ public class ComboActionExecutor : MonoBehaviour
     [SerializeField] private GustProjectile _gustProjectile;
     [SerializeField] private float gustProjectileSpeed = 5f;
 
+    [Header("Player")]
+    [SerializeField] private RecoverHealth recoverTarget;
+    [SerializeField] private GameObject shield;
+
     [Header("Queues")]
     [SerializeField] private ComboActionQueue _queue;
 
@@ -50,11 +54,15 @@ public class ComboActionExecutor : MonoBehaviour
 
         if (action == _shieldAction)
         {
-            Debug.Log("Shield up");
+            Debug.Log("enter shield");
+            shield.SetActive(true);
+            return;
         }
         else if (action == _recoverAction)
         {
-            Debug.Log("Recovering");
+            Debug.Log("enter recover");
+            recoverTarget.ActivateRecover();
+            return;
         }
         else if (action == _activateEarthPrisonAction)
         {
@@ -86,5 +94,7 @@ public class ComboActionExecutor : MonoBehaviour
             Debug.Log("Unknown action");
         }
         _lineRenderer.enabled = false;
+        shield.SetActive(false);
+        recoverTarget.DeactivateRecover();
     }
 }
