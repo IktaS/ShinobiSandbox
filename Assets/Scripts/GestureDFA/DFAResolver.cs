@@ -20,6 +20,7 @@ public class DFAResolver : MonoBehaviour
     [SerializeField] private ComboAction _shootLightningAction;
     [SerializeField] private ComboAction _recoverAction;
     [SerializeField] private ComboAction _gustAction;
+    [SerializeField] private ComboAction _idleAction;
 
     [Header("Combo Queue")]
     [SerializeField] private ComboActionQueue _comboQueue;
@@ -63,6 +64,7 @@ public class DFAResolver : MonoBehaviour
             _earthPrisonNode,
             _aimNode,
             _recoverNode,
+            _idleAction,
             _comboQueue
         );
         currentNode = _idleNode;

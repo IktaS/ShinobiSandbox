@@ -4,7 +4,7 @@ using UnityEngine.Assertions;
 using UnityEngine.Serialization;
 using Oculus.Interaction;
 
-public class ActiveStateSelectorEnter : MonoBehaviour, ISelector
+public class ActiveStateSelectorEnter : MonoBehaviour, ISelectorEnter
 {
     [SerializeField, Interface(typeof(IActiveState))]
     private MonoBehaviour _activeState;

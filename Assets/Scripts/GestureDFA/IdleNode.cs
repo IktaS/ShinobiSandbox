@@ -5,6 +5,7 @@ public class IdleNode : DFANode
     private EarthPrisonNode _earthPrisonNode;
     private AimNode _aimNode;
     private RecoverNode _recoverNode;
+    private ComboAction _idleAction;
 
     private ComboActionQueue _queue;
 
@@ -13,6 +14,7 @@ public class IdleNode : DFANode
         EarthPrisonNode earthPrisonNode,
         AimNode aimNode,
         RecoverNode recoverNode,
+        ComboAction idleAction,
         ComboActionQueue queue
     )
     {
@@ -20,12 +22,13 @@ public class IdleNode : DFANode
         _earthPrisonNode = earthPrisonNode;
         _aimNode = aimNode;
         _recoverNode = recoverNode;
+        _idleAction = idleAction;
         _queue = queue;
     }
 
     public override void enterNode(ComboActionCaller caller, DFANode prevNode)
     {
-        _queue.queue.Enqueue(new ComboActionQueueMessage(caller, null));
+        _queue.queue.Enqueue(new ComboActionQueueMessage(caller, _idleAction));
         return;
     }
 

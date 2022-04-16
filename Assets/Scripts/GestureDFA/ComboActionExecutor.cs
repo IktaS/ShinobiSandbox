@@ -13,9 +13,10 @@ public class ComboActionExecutor : MonoBehaviour
     [SerializeField] private ComboAction _shootLightningAction;
     [SerializeField] private ComboAction _recoverAction;
     [SerializeField] private ComboAction _gustAction;
+    [SerializeField] private ComboAction _idleAction;
 
     [Header("Helper UI")]
-    [SerializeField] private LineRenderer _lineRenderer;
+    [SerializeField] private Pointer _pointer;
     [SerializeField] private ShootProjectile _shootProjectile;
 
     [Header("Projectiles")]
@@ -54,13 +55,11 @@ public class ComboActionExecutor : MonoBehaviour
 
         if (action == _shieldAction)
         {
-            Debug.Log("enter shield");
             shield.SetActive(true);
             return;
         }
         else if (action == _recoverAction)
         {
-            Debug.Log("enter recover");
             recoverTarget.ActivateRecover();
             return;
         }
@@ -70,7 +69,7 @@ public class ComboActionExecutor : MonoBehaviour
         }
         else if (action == _aimAction)
         {
-            _lineRenderer.enabled = true;
+            _pointer.Activate();
             return;
         }
         else if (action == _setEarthPrisonAction)
@@ -89,12 +88,15 @@ public class ComboActionExecutor : MonoBehaviour
         {
             _shootProjectile.Shoot(_gustProjectile, gustProjectileSpeed);
         }
+        else if (action == _idleAction)
+        {
+            _pointer.Deactivate();
+            shield.SetActive(false);
+            recoverTarget.DeactivateRecover();
+        }
         else
         {
-            Debug.Log("Unknown action");
+            Debug.Log("Unknown action " + message.ToString());
         }
-        _lineRenderer.enabled = false;
-        shield.SetActive(false);
-        recoverTarget.DeactivateRecover();
     }
 }

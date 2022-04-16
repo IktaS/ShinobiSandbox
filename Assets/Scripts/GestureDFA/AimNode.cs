@@ -62,6 +62,8 @@ public class AimNode : DFANode
             case GestureType.Gust:
                 _gustNode.setAim(start, dir);
                 return _gustNode;
+            case GestureType.Aim:
+                return this;
         }
         return null;
     }
