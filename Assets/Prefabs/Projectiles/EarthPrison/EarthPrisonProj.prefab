@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -79,10 +80,11 @@ MonoBehaviour:
   muzzleParticle: {fileID: 102132, guid: 806d0ee38ca88074fba80d166fdc96ad, type: 3}
   colliderRadius: 0.1
   collideOffset: 0.1
+  damage: 0
   rb: {fileID: 8471837710667532350}
   offset: 0
   layerMask:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 2039
   queue: {fileID: 11400000, guid: 3e504338ddeb20d45b4aa2c725657e6d, type: 2}
   earthPrisonGOPoolName: EarthPrison

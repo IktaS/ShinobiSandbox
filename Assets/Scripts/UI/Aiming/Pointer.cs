@@ -39,7 +39,7 @@ public class Pointer : MonoBehaviour
 
     private void UpdateStartEnd()
     {
-        _lr.SetPosition(0, start.position);
+        _lr.SetPosition(0, direction.position);
         var end = RaycastHit();
         _lr.SetPosition(1, end);
         reticle.transform.position = end;
@@ -51,25 +51,44 @@ public class Pointer : MonoBehaviour
         reticle.SetActive(false);
         Vector3 end = DefaultEnd(defaultLength);
 
-        if (hit.collider != null)
+        if (hit.collider == null)
         {
-            end = hit.point;
-            reticle.SetActive(true);
+            pointed?.WhenUnpointed(this);
+            pointed = null;
+            return end;
+        }
+        end = hit.point;
+        reticle.SetActive(true);
 
-            pointed = hit.collider.gameObject.GetComponent<IPointable>();
-            if (pointed != null)
-            {
+        var newPointable = hit.collider.gameObject.GetComponent<IPointable>();
+        if (newPointable == null)
+        { // When nothing is pointed and something is pointed before
+            pointed?.WhenUnpointed(this);
+            pointed = null;
+            return end;
+        }
+        if (newPointable != null)
+        { // When something is pointed
+            if (pointed == null)
+            { // if nothing is pointed before
+                pointed = newPointable;
                 pointed.WhenPointed(this);
+                return end;
             }
-        }
-        else
-        {
-            if (pointed != null)
+            if (pointed == newPointable)
             {
+                return end;
+            }
+            if (pointed != newPointable)
+            { // if something is selected before and it's different
                 pointed.WhenUnpointed(this);
-                pointed = null;
+                pointed = newPointable;
+                pointed.WhenPointed(this);
+                return end;
             }
         }
+        // When nothing is pointed and nothing is pointed before, do nothing.
+        // When something is pointed and it's the same as before, do nothing.
 
         return end;
     }
@@ -77,7 +96,8 @@ public class Pointer : MonoBehaviour
     private RaycastHit CreateForwardRaycast()
     {
         RaycastHit hit;
-        Ray ray = new Ray(start.position, direction.position);
+        Ray ray = new Ray(direction.position, (direction.position - start.position).normalized);
+        Debug.DrawRay(direction.position, (direction.position - start.position).normalized);
 
         Physics.Raycast(ray, out hit, defaultLength, mask);
         return hit;

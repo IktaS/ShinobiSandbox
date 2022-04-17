@@ -5,7 +5,6 @@ using DG.Tweening;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] private Canvas canvas;
     [SerializeField] private Image healthBarImage;
     [SerializeField] private Entity target;
 
@@ -26,8 +25,6 @@ public class HealthBar : MonoBehaviour
 
     private Vector3 oldScale;
 
-    private Transform playerPos;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +32,6 @@ public class HealthBar : MonoBehaviour
         transform.localScale = new Vector3(0, 0, 0);
         maxHealth = target.health;
         target.addOnHealthChangeListener(onHealthChange);
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void onHealthChange(float oldHealth, float newHealth)
@@ -59,13 +55,5 @@ public class HealthBar : MonoBehaviour
         }
 
         healthBarImage.DOColor(newColor, duration);
-    }
-
-    void Update()
-    {
-        if (playerPos != null)
-        {
-            canvas.transform.LookAt(playerPos.position, Vector3.up);
-        }
     }
 }

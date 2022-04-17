@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using NaughtyAttributes;
 
 public class PointableObject : MonoBehaviour, IPointable
 {
@@ -15,10 +16,10 @@ public class PointableObject : MonoBehaviour, IPointable
     }
     public void WhenStay(Pointer p)
     {
-        onPointed.Invoke(p);
+        onStay.Invoke(p);
     }
     public void WhenUnpointed(Pointer p)
     {
-        onPointed.Invoke(p);
+        onUnpointed.Invoke(p);
     }
 }
