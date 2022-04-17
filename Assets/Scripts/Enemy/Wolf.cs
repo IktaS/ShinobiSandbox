@@ -7,12 +7,18 @@ using NaughtyAttributes;
 public class Wolf : Enemy
 {
     private WolfRotation wr;
-    [SerializeField] private Transform target;
+    [SerializeField] private Transform _target;
+    private Transform target
+    {
+        get => _target;
+        set => _target = value;
+    }
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody rb;
 
     [SerializeField] private string playerTag;
+    [SerializeField] private string shieldTag;
 
     [SerializeField] private float updateDestinationRate = 0.5f;
     [SerializeField] private float attackChance = 0.1f;
@@ -44,9 +50,11 @@ public class Wolf : Enemy
         }
     }
 
+    private float minimumDelayTime = 2f;
     [SerializeField] private Coroutine randomAttackCoroutine;
     IEnumerator randomlyAttack()
     {
+        yield return new WaitForSeconds(minimumDelayTime);
         for (; ; )
         {
             var rand = Random.Range(0f, 1f);
@@ -76,7 +84,7 @@ public class Wolf : Enemy
         animator.SetTrigger("Bite Attack");
         agent.isStopped = true;
         agent.velocity = Vector3.zero;
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(1.5f);
         agent.isStopped = false;
         SetRunAround();
     }
@@ -85,8 +93,11 @@ public class Wolf : Enemy
     {
         if (other.gameObject.tag == playerTag)
         {
-
             StartCoroutine(DoAttack());
+        }
+        if (other.gameObject.tag == shieldTag)
+        {
+            SetRunAround();
         }
     }
 
