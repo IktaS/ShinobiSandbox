@@ -30,6 +30,11 @@ public class Bomb : Enemy
         Explode();
     }
 
+    void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
     void SetChasePlayer()
     {
         if (nr == null)

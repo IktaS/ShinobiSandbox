@@ -23,6 +23,7 @@ public class Wolf : Enemy
     [SerializeField] private float updateDestinationRate = 0.5f;
     [SerializeField] private float attackChance = 0.1f;
     [SerializeField] private float attackChanceTick = 30f;
+    [SerializeField] private float damage = 30f;
 
     public override void Spawn(Vector3 spawnPos)
     {
@@ -42,6 +43,12 @@ public class Wolf : Enemy
         randomAttackCoroutine = StartCoroutine(randomlyAttack());
     }
 
+    void OnDisable()
+    {
+        StopAllCoroutines();
+        randomAttackCoroutine = null;
+    }
+
     void FixedUpdate()
     {
         if (!agent.isStopped)
@@ -51,7 +58,7 @@ public class Wolf : Enemy
     }
 
     private float minimumDelayTime = 2f;
-    [SerializeField] private Coroutine randomAttackCoroutine;
+    private Coroutine randomAttackCoroutine;
     IEnumerator randomlyAttack()
     {
         yield return new WaitForSeconds(minimumDelayTime);
@@ -79,12 +86,13 @@ public class Wolf : Enemy
         if (randomAttackCoroutine != null) StopCoroutine(randomAttackCoroutine);
     }
 
-    IEnumerator DoAttack()
+    IEnumerator DoAttack(Player p)
     {
         animator.SetTrigger("Bite Attack");
         agent.isStopped = true;
         agent.velocity = Vector3.zero;
         yield return new WaitForSeconds(1.5f);
+        p?.TakeDamage(damage);
         agent.isStopped = false;
         SetRunAround();
     }
@@ -93,7 +101,8 @@ public class Wolf : Enemy
     {
         if (other.gameObject.tag == playerTag)
         {
-            StartCoroutine(DoAttack());
+            Player p = other.gameObject.GetComponent<Player>();
+            StartCoroutine(DoAttack(p));
         }
         if (other.gameObject.tag == shieldTag)
         {

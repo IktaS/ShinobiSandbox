@@ -27,6 +27,16 @@ public class Pointer : MonoBehaviour
         }
     }
 
+    void OnDisable()
+    {
+        pointed?.WhenUnpointed(this);
+    }
+
+    void OnEnable()
+    {
+        pointed?.WhenPointed(this);
+    }
+
     public void Activate()
     {
         gameObject.SetActive(true);

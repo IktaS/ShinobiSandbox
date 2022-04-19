@@ -25,6 +25,11 @@ public class Bat : Enemy
         SetMoveAround();
     }
 
+    void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
     void SetMoveAround()
     {
         if (bp == null)

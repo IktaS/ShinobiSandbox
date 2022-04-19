@@ -16,7 +16,7 @@ public class SpawnManager : MonoBehaviour
     private SpawnManagerDifficulty currentDifficulty;
     private int currentDifficultyIndex = 0;
 
-    void Start()
+    private void Initialize()
     {
         elapsedTime = 0f;
         if (difficulties.Count > 0)
@@ -24,6 +24,21 @@ public class SpawnManager : MonoBehaviour
             currentDifficultyIndex = 0;
             ChangeCurrentDifficulty(difficulties[currentDifficultyIndex]);
         }
+    }
+
+    void OnEnable()
+    {
+        wolfSpawners.ForEach((spawner) => spawner.gameObject.SetActive(true));
+        batSpawners.ForEach((spawner) => spawner.gameObject.SetActive(true));
+        bombSpawners.ForEach((spawner) => spawner.gameObject.SetActive(true));
+        Initialize();
+    }
+
+    void OnDisable()
+    {
+        wolfSpawners.ForEach((spawner) => spawner.gameObject.SetActive(false));
+        batSpawners.ForEach((spawner) => spawner.gameObject.SetActive(false));
+        bombSpawners.ForEach((spawner) => spawner.gameObject.SetActive(false));
     }
 
     void Update()

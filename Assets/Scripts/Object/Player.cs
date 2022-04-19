@@ -8,4 +8,9 @@ public class Player : Entity, IProjectileHittable
     {
         TakeDamage(p.GetDamage());
     }
+
+    public void RestartPlayer()
+    {
+        base.Spawn(transform.position);
+    }
 }

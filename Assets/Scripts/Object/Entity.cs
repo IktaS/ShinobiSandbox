@@ -44,4 +44,10 @@ public class Entity : MonoBehaviour
     {
         health = health + heal;
     }
+
+    public virtual void Spawn(Vector3 spawnPos)
+    {
+        health = maxHealth;
+        isDeath = false;
+    }
 }

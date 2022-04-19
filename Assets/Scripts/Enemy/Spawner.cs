@@ -8,20 +8,29 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private string PoolName;
     private EntitySpawnDifficulty difficulty;
-    private int spawned = 0;
+    private Dictionary<GameObject, bool> spawnedEnemy = new Dictionary<GameObject, bool>();
+
+    void OnDisable()
+    {
+        foreach (var enemy in spawnedEnemy)
+        {
+            EasyObjectPool.instance.ReturnObjectToPool(enemy.Key);
+        }
+        spawnedEnemy.Clear();
+    }
 
     [Button("Spawn")]
     void Spawn()
     {
         if (difficulty == null) return;
-        if (spawned + 1 > difficulty.max) return;
+        if (spawnedEnemy.Count + 1 > difficulty.max) return;
         var go = EasyObjectPool.instance.GetObjectFromPool(PoolName, transform.position, Quaternion.identity);
         var enemy = go.GetComponent<Enemy>();
         if (enemy != null)
         {
             enemy.spawner = this;
             enemy.Spawn(transform.position);
-            spawned++;
+            spawnedEnemy.Add(enemy.gameObject, true);
         }
         else
         {
@@ -37,7 +46,7 @@ public class Spawner : MonoBehaviour
     public void Dead(GameObject go)
     {
         EasyObjectPool.instance.ReturnObjectToPool(go);
-        spawned--;
+        spawnedEnemy.Remove(go);
     }
 
     private Coroutine currentCoroutine;

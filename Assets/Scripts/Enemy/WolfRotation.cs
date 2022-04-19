@@ -6,8 +6,10 @@ public class WolfRotation : NodeRepository
 {
     [SerializeField] private float radius;
     [SerializeField] private float rotationRate;
-    void Start()
+
+    public override void GenerateNodes()
     {
+        base.GenerateNodes();
         for (int i = 0; i < MaxNodeNum; i++)
         {
             var node = new GameObject("Node " + i);

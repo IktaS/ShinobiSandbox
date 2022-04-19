@@ -38,7 +38,6 @@ public class PointableDummyButton : PointableObject, IProjectileHittable
 
     public virtual void HitByProjectile(Projectile p, Vector3 power)
     {
-        Debug.Log("enter  sdasdf");
         onHit.Invoke();
     }
 }

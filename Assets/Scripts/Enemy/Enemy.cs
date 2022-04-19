@@ -11,11 +11,6 @@ public class Enemy : Entity, IProjectileHittable
     {
         OnDeath.AddListener(() => Die());
     }
-    public virtual void Spawn(Vector3 spawnPos)
-    {
-        health = maxHealth;
-        isDeath = false;
-    }
 
     public virtual void HitByProjectile(Projectile p, Vector3 power)
     {
