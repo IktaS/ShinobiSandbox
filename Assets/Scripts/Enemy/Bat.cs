@@ -79,7 +79,7 @@ public class Bat : Enemy
         }
     }
 
-    IEnumerator ragdollByGust(Vector3 power)
+    protected IEnumerator ragdollByGust(Vector3 power)
     {
         animator.SetBool("Fly Forward", false);
         rb.isKinematic = false;

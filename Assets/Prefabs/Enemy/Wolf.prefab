@@ -576,14 +576,16 @@ MonoBehaviour:
   spawner: {fileID: 0}
   deathEffect: {fileID: 3528413525601577031, guid: 408cb3eed86edf54f8b5cf1b1e5c2dff,
     type: 3}
-  target: {fileID: 0}
+  _target: {fileID: 0}
   agent: {fileID: 8311122286566804582}
   animator: {fileID: 8215868972631621002}
   rb: {fileID: 9206322911783887667}
   playerTag: Player
+  shieldTag: Shield
   updateDestinationRate: 0.1
   attackChance: 0.3
   attackChanceTick: 10
+  damage: 30
 --- !u!54 &9206322911783887667
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -119,7 +119,7 @@ public class Wolf : Enemy
         }
     }
 
-    IEnumerator ragdollByGust(Vector3 power)
+    protected IEnumerator ragdollByGust(Vector3 power)
     {
         animator.SetBool("Run Forward", false);
         animator.SetBool("Resting", true);
