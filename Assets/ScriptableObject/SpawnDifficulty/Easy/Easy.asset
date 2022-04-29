@@ -16,4 +16,8 @@ MonoBehaviour:
   wolf: {fileID: 11400000, guid: 563bee495031f7c46a53d3be7fc99788, type: 2}
   bat: {fileID: 11400000, guid: 2d3a88f80fefc02419e6fce65a970421, type: 2}
   bomb: {fileID: 11400000, guid: 36992c06ec9723d4ebe699bbd0679456, type: 2}
+  woodwolf: {fileID: 11400000, guid: 4a7cdfcece4fb4c498261470475ccb05, type: 2}
+  metalwolf: {fileID: 11400000, guid: 4fefacd5c4d1e5f4eb13fc2e94ef9782, type: 2}
+  woodbat: {fileID: 11400000, guid: 7243c98e201a35143a55e066d42f9b3e, type: 2}
+  metalbat: {fileID: 11400000, guid: 25e898e9277dc4f4ab99441022f64b1e, type: 2}
   nextDifficultyTimer: 360
