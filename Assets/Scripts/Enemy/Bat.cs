@@ -28,6 +28,7 @@ public class Bat : Enemy
     void OnDisable()
     {
         StopAllCoroutines();
+        seq.Kill();
     }
 
     void SetMoveAround()

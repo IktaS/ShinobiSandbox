@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.0745916, y: -0.25933003, z: 1.7459522}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,6 +62,25 @@ MonoBehaviour:
     fixedSize: 0
   - poolName: Bomb
     prefab: {fileID: 3255576978113612791, guid: 25874f3aa046e494697e6a5a631b9cbe,
+      type: 3}
+    poolSize: 10
+    fixedSize: 0
+  - poolName: WoodWolf
+    prefab: {fileID: 106415181989884265, guid: 6ecfa23430313c84b8f7039031521b57, type: 3}
+    poolSize: 10
+    fixedSize: 0
+  - poolName: MetalWolf
+    prefab: {fileID: 2979980318938944346, guid: 137f83b99780ae744a5357523239dc0a,
+      type: 3}
+    poolSize: 10
+    fixedSize: 0
+  - poolName: WoodBat
+    prefab: {fileID: 7014488613679824628, guid: 035a62af18efcfe46971a8c709921349,
+      type: 3}
+    poolSize: 10
+    fixedSize: 0
+  - poolName: MetalBat
+    prefab: {fileID: 7380665793140895650, guid: 438f265b9577cf443af3e553a1f544e2,
       type: 3}
     poolSize: 10
     fixedSize: 0
