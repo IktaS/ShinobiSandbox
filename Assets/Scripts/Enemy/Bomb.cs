@@ -10,6 +10,7 @@ public class Bomb : Enemy
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private AudioSource audioSource;
 
     [SerializeField] private float explodeTimer;
     [SerializeField] private float explosionRadius;
@@ -22,6 +23,7 @@ public class Bomb : Enemy
         rb.MovePosition(spawnPos);
         SetChasePlayer();
         StartCoroutine(explodeAfterDelay(explodeTimer));
+        audioSource.Play();
     }
 
     IEnumerator explodeAfterDelay(float delay)
@@ -33,6 +35,7 @@ public class Bomb : Enemy
     void OnDisable()
     {
         StopAllCoroutines();
+        audioSource.Stop();
     }
 
     void SetChasePlayer()
@@ -77,17 +80,31 @@ public class Bomb : Enemy
 
     void Explode()
     {
-        var colliders = Physics.OverlapSphere(transform.position, explosionRadius, explosionLayerMask);
+        var colliders = Physics.OverlapSphere(transform.position, explosionRadius);
 
         foreach (var col in colliders)
         {
-            var isHit = Physics.Raycast(transform.position, col.ClosestPoint(transform.position), explosionRadius);
+            if (!(col.tag == "Enemy" || col.tag == "Player") || col.transform == transform || col.transform.IsChildOf(transform))
+            {
+                continue;
+            }
+            var raycastHits = Physics.RaycastAll(transform.position, col.transform.position, explosionRadius);
+            Debug.DrawLine(transform.position, col.transform.position, Color.blue, 30f);
+            var isHit = false;
+            foreach (var hits in raycastHits)
+            {
+                if (!(hits.transform.IsChildOf(transform) || hits.transform == transform))
+                {
+                    continue;
+                }
+                isHit = true;
+                break;
+            }
             if (isHit)
             {
                 var entity = col.gameObject.GetComponent<Entity>();
                 if (entity != null)
                 {
-                    Debug.Log("find entity " + entity.name);
                     entity.TakeDamage(explosionDamage);
                 }
             }

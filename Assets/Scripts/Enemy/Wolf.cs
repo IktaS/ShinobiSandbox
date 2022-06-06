@@ -16,6 +16,10 @@ public class Wolf : Enemy
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private AudioSource audioSource;
+
+    [SerializeField] private AudioClip growlAudio;
+    [SerializeField] private AudioClip biteAudio;
 
     [SerializeField] private string playerTag;
     [SerializeField] private string shieldTag;
@@ -78,6 +82,8 @@ public class Wolf : Enemy
     [Button]
     void SetAttackPlayer()
     {
+        audioSource.PlayOneShot(growlAudio);
+
         if (wr == null)
         {
             wr = GameObject.FindObjectOfType<WolfRotation>();
@@ -88,6 +94,7 @@ public class Wolf : Enemy
 
     IEnumerator DoAttack(Player p)
     {
+        audioSource.PlayOneShot(biteAudio);
         animator.SetTrigger("Bite Attack");
         agent.isStopped = true;
         agent.velocity = Vector3.zero;

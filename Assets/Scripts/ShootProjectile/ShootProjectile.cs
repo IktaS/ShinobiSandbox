@@ -33,4 +33,9 @@ public class ShootProjectile : MonoBehaviour
         var spawnedProj = go.GetComponent<Projectile>();
         spawnedProj.Shoot(start, dir, projectileSpeed, maxDistance);
     }
+
+    public void ShootDEBUG(Projectile projectile)
+    {
+        Shoot(projectile, 5f);
+    }
 }
