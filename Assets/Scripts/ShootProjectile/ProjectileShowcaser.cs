@@ -10,15 +10,13 @@ public class ProjectileShowcaser : MonoBehaviour
     [SerializeField] private AimRef aim;
     [SerializeField] private Vector3 scale = new Vector3(0.1f, 0.1f, 0.1f);
 
-    private GameObject _go;
-
     public void ShowcaseProjectile(GameObject go)
     {
         var (start, end) = aim.GetAim();
-        currentProjectile = go;
-        _go = Instantiate(currentProjectile, end.position, Quaternion.LookRotation(end.position, Vector3.up));
-        _go.transform.localScale = new Vector3(scale.x, scale.y, scale.z);
-        _go.transform.SetParent(end.transform);
+        DeleteProjectile();
+        currentProjectile = Instantiate(go, end.position, Quaternion.LookRotation(end.position, Vector3.up));
+        currentProjectile.transform.localScale = new Vector3(scale.x, scale.y, scale.z);
+        currentProjectile.transform.SetParent(end.transform);
     }
 
     [Button]
@@ -30,9 +28,10 @@ public class ProjectileShowcaser : MonoBehaviour
     [Button]
     public void DeleteProjectile()
     {
-        if (_go)
+        if (currentProjectile)
         {
-            Destroy(_go);
+            Destroy(currentProjectile);
+            currentProjectile = null;
         }
     }
 }
