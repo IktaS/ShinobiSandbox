@@ -6,8 +6,7 @@ using MarchingBytes;
 public class ShootProjectile : MonoBehaviour
 {
     [SerializeField] private Projectile currentProjectile;
-    [SerializeField] private Transform startPoint;
-    [SerializeField] private Transform dirPoint;
+    [SerializeField] private AimRef aim;
     [SerializeField] private float maxDistance = 100f;
 
     public void setProjectile(Projectile projectile)
@@ -20,8 +19,16 @@ public class ShootProjectile : MonoBehaviour
         maxDistance = distance;
     }
 
+    private float speed = 5f;
+
+    public void SetSpeed(float _speed)
+    {
+        speed = _speed;
+    }
+
     public void Shoot(Projectile projectile, float projectileSpeed)
     {
+        var (startPoint, dirPoint) = aim.GetAim();
         if (projectile != null)
         {
             currentProjectile = projectile;
@@ -36,6 +43,6 @@ public class ShootProjectile : MonoBehaviour
 
     public void ShootDEBUG(Projectile projectile)
     {
-        Shoot(projectile, 5f);
+        Shoot(projectile, speed);
     }
 }

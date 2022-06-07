@@ -6,8 +6,7 @@ public class Pointer : MonoBehaviour
 {
     [SerializeField] private GameObject reticle;
     [SerializeField] private float defaultLength;
-    [SerializeField] private Transform start;
-    [SerializeField] private Transform direction;
+    [SerializeField] private AimRef aim;
     [SerializeField] private LayerMask mask;
 
     private LineRenderer _lr;
@@ -49,6 +48,7 @@ public class Pointer : MonoBehaviour
 
     private void UpdateStartEnd()
     {
+        var (start, direction) = aim.GetAim();
         _lr.SetPosition(0, direction.position);
         var end = RaycastHit();
         _lr.SetPosition(1, end);
@@ -105,6 +105,7 @@ public class Pointer : MonoBehaviour
 
     private RaycastHit CreateForwardRaycast()
     {
+        var (start, direction) = aim.GetAim();
         RaycastHit hit;
         Ray ray = new Ray(direction.position, (direction.position - start.position).normalized);
         Debug.DrawRay(direction.position, (direction.position - start.position).normalized);
@@ -115,6 +116,7 @@ public class Pointer : MonoBehaviour
 
     private Vector3 DefaultEnd(float length)
     {
+        var (start, direction) = aim.GetAim();
         return start.position + (direction.position - start.position).normalized * length;
     }
 }
