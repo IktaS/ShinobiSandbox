@@ -165,6 +165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7575035082177998984}
+  - component: {fileID: 5020652921974332455}
   m_Layer: 0
   m_Name: Aim
   m_TagString: Untagged
@@ -187,6 +188,20 @@ Transform:
   m_Father: {fileID: 7011436865532967334}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5020652921974332455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2311535292482139078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be070c166b2419743b7bd58201fc1c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: {fileID: 3015644074179760403}
+  end: {fileID: 7575035082177998984}
 --- !u!1 &2620346945957009545
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,8 +820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentProjectile: {fileID: 0}
-  startPoint: {fileID: 3015644074179760403}
-  dirPoint: {fileID: 7575035082177998984}
+  aim: {fileID: 5020652921974332455}
   maxDistance: 100
 --- !u!135 &6930366818237914837
 SphereCollider:
