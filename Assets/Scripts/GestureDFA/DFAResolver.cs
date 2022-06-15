@@ -8,8 +8,7 @@ public class DFAResolver : MonoBehaviour
     [SerializeField] private RecognizeGesture _gestureEvents;
     [SerializeField] private ComboActionCaller _caller;
 
-    [SerializeField] private Transform _startPoint;
-    [SerializeField] private Transform _dirPoint;
+    [SerializeField] private AimRef aimRef;
 
     [Header("Combo Action")]
     [SerializeField] private ComboAction _shieldAction;
@@ -43,6 +42,7 @@ public class DFAResolver : MonoBehaviour
 
     private void initializeNodes()
     {
+        var (_startPoint, _dirPoint) = aimRef.GetAim();
         _shieldNode = new ShieldNode(_shieldAction, _comboQueue);
         _earthPrisonNode = new EarthPrisonNode(_activateEarthPrisonAction, _setEarthPrisonAction, _comboQueue);
         _fireNode = new FireNode(_shootFireAction, _comboQueue);

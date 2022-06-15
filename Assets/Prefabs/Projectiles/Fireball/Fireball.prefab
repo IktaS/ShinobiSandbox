@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c99b8ac8c24e874e90dc82fe82a1ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parameters: {fileID: 11400000, guid: e06d0929d64c6e7428debe8c3411efe1, type: 2}
   impactParticle: {fileID: 1636806931387756, guid: 448e8d4f82f29da4298ec7ad31825184,
     type: 3}
   projectileParticle: {fileID: 1692925882083106, guid: d2e12f11e1f9a8f41a018e2f56fd9589,

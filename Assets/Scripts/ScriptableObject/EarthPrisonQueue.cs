@@ -8,12 +8,14 @@ public class EarthPrisonQueue : ScriptableObject
     public int maximumSize = 1;
     private Queue<EarthPrison> queue = new Queue<EarthPrison>();
 
-    public void addEarthPrison(EarthPrison ep)
+    public bool addEarthPrison(EarthPrison ep)
     {
         if (queue.Count < maximumSize)
         {
             queue.Enqueue(ep);
+            return true;
         }
+        return false;
     }
 
     public void activateAllEarthPrison()

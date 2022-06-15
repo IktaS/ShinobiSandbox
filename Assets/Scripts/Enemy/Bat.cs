@@ -56,7 +56,7 @@ public class Bat : Enemy
             Append(transform.DOLookAt(bp.GetTrueTarget().position, 2f, AxisConstraint.None, Vector3.up)).
             AppendCallback(() =>
             {
-                shoot.Shoot(projectile, projectileSpeed);
+                shoot.Shoot(projectile);
             }).AppendInterval(shootMoveAgainDelay).OnComplete(() => SetMoveAround());
 
     }

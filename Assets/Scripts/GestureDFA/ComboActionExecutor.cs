@@ -18,19 +18,16 @@ public class ComboActionExecutor : MonoBehaviour
     [Header("Helper UI")]
     [SerializeField] private Pointer _pointer;
     [SerializeField] private ShootProjectile _shootProjectile;
+    [SerializeField] private CSVWriter _writer;
 
     [Header("Projectiles")]
     [SerializeField] private FireProjectile _fireProjectile;
-    [SerializeField] private float fireProjectileSpeed = 5f;
 
     [SerializeField] private EarthPrisonProjectile _earthPrisonProjectile;
-    [SerializeField] private float earthPrisonProjectileSpeed = 5f;
 
     [SerializeField] private LightningProjectile _lightningProjectile;
-    [SerializeField] private float lightningProjectileSpeed = 20f;
 
     [SerializeField] private GustProjectile _gustProjectile;
-    [SerializeField] private float gustProjectileSpeed = 5f;
 
     [Header("Player")]
     [SerializeField] private RecoverHealth recoverTarget;
@@ -52,7 +49,7 @@ public class ComboActionExecutor : MonoBehaviour
     void ExecuteAction(ComboActionQueueMessage message)
     {
         ComboAction action = message.Action;
-
+        _writer.WriteGestureData(new GestureInputData(caller: ComboActionCallerUserString.GetString(message.Caller), "", action.name));
         if (action == _shieldAction)
         {
             shield.SetActive(true);
@@ -74,19 +71,19 @@ public class ComboActionExecutor : MonoBehaviour
         }
         else if (action == _setEarthPrisonAction)
         {
-            _shootProjectile.Shoot(_earthPrisonProjectile, earthPrisonProjectileSpeed);
+            _shootProjectile.Shoot(_earthPrisonProjectile);
         }
         else if (action == _shootFireAction)
         {
-            _shootProjectile.Shoot(_fireProjectile, fireProjectileSpeed);
+            _shootProjectile.Shoot(_fireProjectile);
         }
         else if (action == _shootLightningAction)
         {
-            _shootProjectile.Shoot(_lightningProjectile, lightningProjectileSpeed);
+            _shootProjectile.Shoot(_lightningProjectile);
         }
         else if (action == _gustAction)
         {
-            _shootProjectile.Shoot(_gustProjectile, gustProjectileSpeed);
+            _shootProjectile.Shoot(_gustProjectile);
         }
         else if (action == _idleAction)
         {

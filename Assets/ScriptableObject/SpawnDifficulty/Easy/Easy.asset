@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e8349b083e85345ad6e248329ede03, type: 3}
   m_Name: Easy
   m_EditorClassIdentifier: 
-  seed: -1
+  seed: 1
   wolf: {fileID: 11400000, guid: 563bee495031f7c46a53d3be7fc99788, type: 2}
   bat: {fileID: 11400000, guid: 2d3a88f80fefc02419e6fce65a970421, type: 2}
   bomb: {fileID: 11400000, guid: 36992c06ec9723d4ebe699bbd0679456, type: 2}

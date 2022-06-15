@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shapeName: Lightning_V2
   _thumbFeatureConfigs:
-    _value: []
+    _value:
+    - _mode: 0
+      _feature: 0
+      _state: 2
   _indexFeatureConfigs:
     _value:
     - _mode: 0
@@ -23,13 +26,13 @@ MonoBehaviour:
   _middleFeatureConfigs:
     _value:
     - _mode: 0
-      _feature: 3
-      _state: 9
+      _feature: 0
+      _state: 2
   _ringFeatureConfigs:
     _value:
     - _mode: 0
-      _feature: 3
-      _state: 9
+      _feature: 0
+      _state: 2
   _pinkyFeatureConfigs:
     _value:
     - _mode: 0

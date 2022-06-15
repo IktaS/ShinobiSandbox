@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8436d567ef203bd4d8bd46c417048257, type: 3}
   m_Name: ShootGust
   m_EditorClassIdentifier: 
+  name: ShootGust_V1
   start: {x: 0, y: 0, z: 0}
   dir: {x: 0, y: 0, z: 0}

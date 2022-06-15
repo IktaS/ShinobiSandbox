@@ -5,6 +5,7 @@ using MarchingBytes;
 
 public abstract class Projectile : MonoBehaviour
 {
+    public ProjectileParameters parameters;
     public GameObject impactParticle; // Effect spawned when projectile hits a collider
     public GameObject projectileParticle; // Effect attached to the gameobject as child
     public GameObject muzzleParticle; // Effect instantly spawned when gameobject is spawned
@@ -15,6 +16,8 @@ public abstract class Projectile : MonoBehaviour
     public abstract string PoolName();
     public abstract void Shoot(Vector3 start, Vector3 dir, float speed, float distance);
     [SerializeField] private float damage;
+
+    private Vector3 spawnLoc;
 
     public float GetDamage()
     {
@@ -31,6 +34,7 @@ public abstract class Projectile : MonoBehaviour
             muzzleParticle.transform.localScale = transform.localScale;
             Destroy(muzzleParticle, 1.5f); // 2nd parameter is lifetime of effect in seconds
         }
+        spawnLoc = transform.position;
     }
 
     void FixedUpdate()
@@ -38,6 +42,10 @@ public abstract class Projectile : MonoBehaviour
         if (GetComponent<Rigidbody>().velocity.magnitude != 0)
         {
             transform.rotation = Quaternion.LookRotation(GetComponent<Rigidbody>().velocity); // Sets rotation to look at direction of movement
+        }
+        if (Vector3.Distance(spawnLoc, transform.position) >= parameters.maxDistance)
+        {
+            ReturnGameObject(transform.position, Vector3.zero);
         }
     }
 

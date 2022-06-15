@@ -19,14 +19,7 @@ public class ShootProjectile : MonoBehaviour
         maxDistance = distance;
     }
 
-    private float speed = 5f;
-
-    public void SetSpeed(float _speed)
-    {
-        speed = _speed;
-    }
-
-    public void Shoot(Projectile projectile, float projectileSpeed)
+    public void Shoot(Projectile projectile)
     {
         var (startPoint, dirPoint) = aim.GetAim();
         if (projectile != null)
@@ -38,11 +31,11 @@ public class ShootProjectile : MonoBehaviour
         Vector3 direction = (dir - start).normalized;
         GameObject go = Instantiate(currentProjectile.gameObject, dir, Quaternion.LookRotation(direction, Vector3.up));
         var spawnedProj = go.GetComponent<Projectile>();
-        spawnedProj.Shoot(start, dir, projectileSpeed, maxDistance);
+        spawnedProj.Shoot(start, dir, currentProjectile.parameters.speed, maxDistance);
     }
 
     public void ShootDEBUG(Projectile projectile)
     {
-        Shoot(projectile, speed);
+        Shoot(projectile);
     }
 }

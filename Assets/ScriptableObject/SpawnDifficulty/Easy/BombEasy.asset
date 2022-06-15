@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07978dbb7f3275743b8dd4780ba07fad, type: 3}
   m_Name: BombEasy
   m_EditorClassIdentifier: 
-  max: 3
+  max: 2
   spawnDelay: 120
-  chance: 0.5
+  chance: 0.2
   spawnChanceTimer: 30

@@ -42,7 +42,11 @@ public class EarthPrisonProjectile : Projectile
             var ep = go.GetComponent<EarthPrison>();
             if (ep != null)
             {
-                queue.addEarthPrison(ep);
+                var success = queue.addEarthPrison(ep);
+                if (!success)
+                {
+                    EasyObjectPool.instance.ReturnObjectToPool(go);
+                }
             }
         }
         ReturnGameObject(contactPoint.point, contactPoint.normal);
