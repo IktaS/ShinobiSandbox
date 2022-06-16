@@ -87,9 +87,7 @@ public class ComboActionExecutor : MonoBehaviour
         }
         else if (action == _idleAction)
         {
-            _pointer.Deactivate();
-            shield.SetActive(false);
-            recoverTarget.DeactivateRecover();
+            Debug.Log("idle");
         }
         else
         {

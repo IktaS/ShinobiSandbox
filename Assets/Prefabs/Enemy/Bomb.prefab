@@ -526,7 +526,7 @@ MonoBehaviour:
   explosionLayerMask:
     serializedVersion: 2
     m_Bits: 2147483647
-  explosionDamage: 150
+  explosionDamage: 200
 --- !u!82 &3859254208831961205
 AudioSource:
   m_ObjectHideFlags: 0

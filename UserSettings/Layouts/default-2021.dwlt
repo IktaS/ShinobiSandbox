@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 132
+  controlID: 72
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 133
+  controlID: 73
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 134
+  controlID: 74
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,8 +270,8 @@ MonoBehaviour:
     y: 0
     width: 504
     height: 939
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -312,7 +312,7 @@ MonoBehaviour:
     m_CachedPref: 162
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 623110
+  m_LastInspectedObjectInstanceID: 238032
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -0.21436605, y: 0.0150619745, z: 0.010479541}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: -0.21436605, y: 0.0150619745, z: 0.010479541}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 3
@@ -600,7 +600,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 24.844425
     speed: 2
-    m_Value: 0.4919025
+    m_Value: 24.844425
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -659,7 +659,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6241f8ffb641f8ffe282f8ffd89afaff2c9bfaff42dcfafff89cfeff449dfeff06dafeff8a17ffffe017ffff0459ffff8c72fffff672ffffec74ffff5675ffff4c77ffff5477ffff3478ffffa2c7ffff34fbffffee660000b4770000ceb3010044b8010062b801009cc0010078d0010028d9010034e50100b0f301006af5010000f8010058fc010060050200bed602008cd8020002dd0200b4e6020006f00200fef1020032f4020036f50200e6fd0200281a0300be1c0300542203001e2a0300e2520900d653090064760900b87f090094990900
+      m_ExpandedIDs: e034feff3035feffee71feff7a77feffca77feffe6b8feff3ec0feff92c0feffae01ffff142cffff602cffff2a69ffff566fffffc66fffffecb0ffff92effffff8efffff6ef0ffff34fbffffcc0b010052330100b8400100a44f0200686d0200ee94020054a20200d6740300188d03009eb4030034ba030004c20300ee6f0400048c04005aa004008ab30400bab90400f0c00400
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -818,22 +818,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Projectiles/Showcase
+    - Assets/Scripts/GestureDFA
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Projectiles/Showcase
+  - Assets/Scripts/GestureDFA
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Projects\Unity\Shinobi-Sandbox
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 218}
-    m_SelectedIDs: 9e9a0000
-    m_LastClickedID: 39582
-    m_ExpandedIDs: 00000000549a00007c9a0000829a0000849a00008e9a0000a859010000ca9a3b
+    scrollPos: {x: 0, y: 314}
+    m_SelectedIDs: c4890100
+    m_LastClickedID: 100804
+    m_ExpandedIDs: 00000000d2940000229500002a95000034950000c689010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -861,7 +861,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000549a0000
+    m_ExpandedIDs: 00000000d2940000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -888,7 +888,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -940,7 +940,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 629
-    width: 1465
+    width: 1415
     height: 362
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
