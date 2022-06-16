@@ -7,6 +7,7 @@ using NaughtyAttributes;
 public class CSVWriter : MonoBehaviour
 {
     private StreamWriter writer;
+    private List<GestureInputData> datas = new List<GestureInputData>();
     public void Start()
     {
     }
@@ -16,19 +17,18 @@ public class CSVWriter : MonoBehaviour
     {
         if (writer == null)
         {
-            string fname = System.DateTime.Now.ToString(Application.productName + "-yyyy:MM:dd-HH:mm:ssK") + ".csv";
+            string fname = Application.productName + "-" + System.DateTime.Now.ToString("yyyy:MM:dd-HH:mm:ssK") + ".csv";
             string path = Path.Combine(Application.persistentDataPath, fname);
             writer = new StreamWriter(path);
-            writer.WriteAsync("CallerHand,GestureInput,ActionExecuted,Time\n");
         }
     }
 
     public void WriteGestureData(GestureInputData data)
     {
-        if (writer != null)
+        if (datas != null)
         {
             data.Time = System.DateTime.Now.ToString("HH:mm:ss.ffffff");
-            writer.WriteAsync(data.ToString());
+            datas.Add(data);
         }
     }
 
@@ -37,7 +37,13 @@ public class CSVWriter : MonoBehaviour
     {
         if (writer != null)
         {
+            writer.WriteLineAsync("CallerHand,GestureInput,ActionExecuted,Time");
+            foreach (var data in datas)
+            {
+                writer.WriteLineAsync(data.ToString());
+            }
             writer.Close();
+            writer = null;
         }
     }
 
@@ -52,7 +58,7 @@ public struct GestureInputData
 
     public override string ToString()
     {
-        return $"{CallerHand},{GestureInput},{ActionExecuted},{Time}\n";
+        return $"{CallerHand},{GestureInput},{ActionExecuted},{Time}";
     }
 
     public GestureInputData(string caller, string gesture, string action)
