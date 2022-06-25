@@ -21,6 +21,10 @@ public class Bomb : Enemy
     {
         base.Spawn(spawnPos);
         rb.MovePosition(spawnPos);
+        rb.isKinematic = true;
+        agent.enabled = true;
+        agent.isStopped = false;
+        rb.useGravity = false;
         SetChasePlayer();
         StartCoroutine(explodeAfterDelay(explodeTimer));
         audioSource.Play();

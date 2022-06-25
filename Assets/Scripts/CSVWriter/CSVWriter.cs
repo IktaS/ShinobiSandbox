@@ -15,36 +15,39 @@ public class CSVWriter : MonoBehaviour
     [Button]
     public void StartWrite()
     {
-        if (writer == null)
-        {
-            string fname = Application.productName + "-" + System.DateTime.Now.ToString("yyyy:MM:dd-HH:mm:ssK") + ".csv";
-            string path = Path.Combine(Application.persistentDataPath, fname);
-            writer = new StreamWriter(path);
-        }
+        string fname = System.DateTime.Now.ToString("yyyy:MM:dd-HH:mm:ssK") + ".csv";
+        string path = Path.Combine(Application.persistentDataPath, fname);
+        writer = new StreamWriter(path);
+        datas = new List<GestureInputData>();
     }
 
     public void WriteGestureData(GestureInputData data)
     {
-        if (datas != null)
+        if (datas == null)
         {
-            data.Time = System.DateTime.Now.ToString("HH:mm:ss.ffffff");
-            datas.Add(data);
+            datas = new List<GestureInputData>();
         }
+        data.Time = System.DateTime.Now.ToString("HH:mm:ss.ffffff");
+        datas.Add(data);
     }
 
     [Button]
     public void FinishWrite()
     {
-        if (writer != null)
+        if (writer == null)
         {
-            writer.WriteLineAsync("CallerHand,GestureInput,ActionExecuted,Time");
-            foreach (var data in datas)
-            {
-                writer.WriteLineAsync(data.ToString());
-            }
-            writer.Close();
-            writer = null;
+            string fname = System.DateTime.Now.ToString("yyyy:MM:dd-HH:mm:ssK") + ".csv";
+            string path = Path.Combine(Application.persistentDataPath, fname);
+            writer = new StreamWriter(path);
         }
+        writer.WriteLine("CallerHand,GestureInput,ActionExecuted,Time");
+        foreach (var data in datas)
+        {
+            writer.WriteLine(data.ToString());
+        }
+        writer.Close();
+        writer = null;
+        datas = new List<GestureInputData>();
     }
 
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using NaughtyAttributes;
 
 public class UITimer : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class UITimer : MonoBehaviour
         ResetTimer();
     }
 
+    [Button]
     public void StartTimer()
     {
         playing = true;
