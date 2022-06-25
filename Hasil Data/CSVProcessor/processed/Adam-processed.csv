@@ -1,0 +1,78 @@
+Total Action: 
+A,B
+249,211
+Total Action Attempt 1: 
+A,B
+54,17
+Total Action Attempt 2: 
+A,B
+84,90
+Total Action Attempt 3: 
+A,B
+111,104
+Average Action: 
+A,B
+83.0,70.33333333333333
+Total Gesture: 
+A,B
+503,1213
+Total Gesture Attempt 1: 
+A,B
+125,111
+Total Gesture Attempt 2: 
+A,B
+194,484
+Total Gesture Attempt 3: 
+A,B
+184,618
+Average Gesture: 
+A,B
+167.66666666666666,404.3333333333333
+Total Hand: 
+Right,Left,Both
+1456,672,48
+Total Hand Attempt 1: 
+Right,Left,Both
+235,65,7
+Total Hand Attempt 2: 
+Right,Left,Both
+567,271,14
+Total Hand Attempt 3: 
+Right,Left,Both
+654,336,27
+Average Hand: 
+Right,Left,Both
+485.3333333333333,224.0,16.0
+Total Action: 
+ShootFire_V1,ShootLightning_V1,ShootGust_V1,ShootEarthPrison_V1,ActivateEarthPrison_V1,ActivateShield_V1,ActivateRecover_V1,ShootFire_V2,ShootLightning_V2,ShootGust_V2,ShootEarthPrison_V2,ActivateEarthPrison_V2,ActivateShield_V2,ActivateRecover_V2
+12,83,16,0,4,42,92,145,0,8,6,4,4,44
+Total Action Attempt 1: 
+ShootFire_V1,ShootLightning_V1,ShootGust_V1,ShootEarthPrison_V1,ActivateEarthPrison_V1,ActivateShield_V1,ActivateRecover_V1,ShootFire_V2,ShootLightning_V2,ShootGust_V2,ShootEarthPrison_V2,ActivateEarthPrison_V2,ActivateShield_V2,ActivateRecover_V2
+4,28,6,0,1,7,8,9,0,0,1,0,2,5
+Total Action Attempt 2: 
+ShootFire_V1,ShootLightning_V1,ShootGust_V1,ShootEarthPrison_V1,ActivateEarthPrison_V1,ActivateShield_V1,ActivateRecover_V1,ShootFire_V2,ShootLightning_V2,ShootGust_V2,ShootEarthPrison_V2,ActivateEarthPrison_V2,ActivateShield_V2,ActivateRecover_V2
+0,33,5,0,3,12,31,69,0,5,0,2,0,14
+Total Action Attempt 3: 
+ShootFire_V1,ShootLightning_V1,ShootGust_V1,ShootEarthPrison_V1,ActivateEarthPrison_V1,ActivateShield_V1,ActivateRecover_V1,ShootFire_V2,ShootLightning_V2,ShootGust_V2,ShootEarthPrison_V2,ActivateEarthPrison_V2,ActivateShield_V2,ActivateRecover_V2
+8,22,5,0,0,23,53,67,0,3,5,2,2,25
+Average Action: 
+ShootFire_V1,ShootLightning_V1,ShootGust_V1,ShootEarthPrison_V1,ActivateEarthPrison_V1,ActivateShield_V1,ActivateRecover_V1,ShootFire_V2,ShootLightning_V2,ShootGust_V2,ShootEarthPrison_V2,ActivateEarthPrison_V2,ActivateShield_V2,ActivateRecover_V2
+4.0,27.666666666666668,5.333333333333333,0.0,1.3333333333333333,14.0,30.666666666666668,48.333333333333336,0.0,2.6666666666666665,2.0,1.3333333333333333,1.3333333333333333,14.666666666666666
+Total Gesture: 
+Aim_V1,Fire_V1,Lightning_V1,Gust_V1,EarthPrison_V1,Recover_V1,Shield_V1,ActivateFire_V2,ThrowFire_V2,Recover_V2,AimLightning_V2,ActivateLightning_V2,ActivateThrowEarthPrison_V2,ThrowEarthPrison_V2,ActivateActivationEarthPrison_V2,ThrowActivationEarthPrison_V2,ActivateGust_V2,ThrowGust_V2,Shield_V2
+198,17,129,21,4,92,42,254,244,88,14,21,10,258,37,10,21,244,12
+Total Gesture Attempt 1: 
+Aim_V1,Fire_V1,Lightning_V1,Gust_V1,EarthPrison_V1,Recover_V1,Shield_V1,ActivateFire_V2,ThrowFire_V2,Recover_V2,AimLightning_V2,ActivateLightning_V2,ActivateThrowEarthPrison_V2,ThrowEarthPrison_V2,ActivateActivationEarthPrison_V2,ThrowActivationEarthPrison_V2,ActivateGust_V2,ThrowGust_V2,Shield_V2
+64,6,30,9,1,8,7,16,22,8,6,1,2,24,3,1,0,22,6
+Total Gesture Attempt 2: 
+Aim_V1,Fire_V1,Lightning_V1,Gust_V1,EarthPrison_V1,Recover_V1,Shield_V1,ActivateFire_V2,ThrowFire_V2,Recover_V2,AimLightning_V2,ActivateLightning_V2,ActivateThrowEarthPrison_V2,ThrowEarthPrison_V2,ActivateActivationEarthPrison_V2,ThrowActivationEarthPrison_V2,ActivateGust_V2,ThrowGust_V2,Shield_V2
+75,0,67,6,3,31,12,101,105,30,0,9,0,107,12,1,14,105,0
+Total Gesture Attempt 3: 
+Aim_V1,Fire_V1,Lightning_V1,Gust_V1,EarthPrison_V1,Recover_V1,Shield_V1,ActivateFire_V2,ThrowFire_V2,Recover_V2,AimLightning_V2,ActivateLightning_V2,ActivateThrowEarthPrison_V2,ThrowEarthPrison_V2,ActivateActivationEarthPrison_V2,ThrowActivationEarthPrison_V2,ActivateGust_V2,ThrowGust_V2,Shield_V2
+59,11,32,6,0,53,23,137,117,50,8,11,8,127,22,8,7,117,6
+Average Gesture: 
+Aim_V1,Fire_V1,Lightning_V1,Gust_V1,EarthPrison_V1,Recover_V1,Shield_V1,ActivateFire_V2,ThrowFire_V2,Recover_V2,AimLightning_V2,ActivateLightning_V2,ActivateThrowEarthPrison_V2,ThrowEarthPrison_V2,ActivateActivationEarthPrison_V2,ThrowActivationEarthPrison_V2,ActivateGust_V2,ThrowGust_V2,Shield_V2
+66.0,5.666666666666667,43.0,7.0,1.3333333333333333,30.666666666666668,14.0,84.66666666666667,81.33333333333333,29.333333333333332,4.666666666666667,7.0,3.3333333333333335,86.0,12.333333333333334,3.3333333333333335,7.0,81.33333333333333,4.0
+Time Per Attempt
+Attempt 1,Attempt 2,Attempt 3
+03:49,07:39,11:39
