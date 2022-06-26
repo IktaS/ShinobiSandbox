@@ -96,6 +96,64 @@ MonoBehaviour:
   - {fileID: 1863998679}
   - {fileID: 1961063326}
   _logicOperator: 0
+--- !u!1 &1441628000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1441628003}
+  - component: {fileID: 1441628002}
+  - component: {fileID: 1441628001}
+  m_Layer: 0
+  m_Name: Writer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1441628003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441628000}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.19932547, y: 2.1039095, z: 0.7221174}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8180071691870687290}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1441628002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441628000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a88387d2884086a4bba223d814a82da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1441628001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441628000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e10b0ff66649b264db15b63d68b73a36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  writer: {fileID: 1441628002}
 --- !u!1 &1863998675
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14164f8f23faae4293baeb84485b3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hand: {fileID: 2695754001123643582}
+  _hand: {fileID: 1747239052671634951}
 --- !u!114 &4705916230415163323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,7 +506,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -460,7 +518,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -472,7 +530,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -484,7 +542,7 @@ MonoBehaviour:
           m_StringArgument: EarthPrison_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -496,7 +554,7 @@ MonoBehaviour:
           m_StringArgument: ActivateEarthPrison_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -853,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14164f8f23faae4293baeb84485b3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hand: {fileID: 2695754001123643582}
+  _hand: {fileID: 1747239052671634951}
 --- !u!114 &475355908545013683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -882,7 +940,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -894,7 +952,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -906,7 +964,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -918,7 +976,7 @@ MonoBehaviour:
           m_StringArgument: Shield_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -930,7 +988,7 @@ MonoBehaviour:
           m_StringArgument: ActivateShield_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -1121,7 +1179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14164f8f23faae4293baeb84485b3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hand: {fileID: 2695754001123643582}
+  _hand: {fileID: 1747239052671634951}
 --- !u!114 &1875893302940584317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1138,7 +1196,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -1150,7 +1208,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -1162,7 +1220,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -1174,7 +1232,7 @@ MonoBehaviour:
           m_StringArgument: Fire_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -1184,6 +1242,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DebugPrinter, Assembly-CSharp
+        m_MethodName: PrintDebug
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: enter
           m_BoolArgument: 0
         m_CallState: 2
   _whenUnselected:
@@ -1321,7 +1391,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -1333,7 +1403,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -1345,7 +1415,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -1357,7 +1427,7 @@ MonoBehaviour:
           m_StringArgument: Aim_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -1369,7 +1439,7 @@ MonoBehaviour:
           m_StringArgument: ActivateAim_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -4381,7 +4451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14164f8f23faae4293baeb84485b3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hand: {fileID: 2695754001123643582}
+  _hand: {fileID: 1747239052671634951}
 --- !u!114 &8163581130083874489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4410,7 +4480,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -4422,7 +4492,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -4434,7 +4504,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -4446,7 +4516,7 @@ MonoBehaviour:
           m_StringArgument: Recover_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -4458,7 +4528,7 @@ MonoBehaviour:
           m_StringArgument: ActivateRecover_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -4473,9 +4543,9 @@ MonoBehaviour:
   _whenUnselected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2689015421595078855}
+      - m_Target: {fileID: 3003779296210017198}
         m_TargetAssemblyTypeName: RecoverHealth, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: DeactivateRecover
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5105,7 +5175,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628002}
         m_TargetAssemblyTypeName: CSVWriter, Assembly-CSharp
         m_MethodName: FinishWrite
         m_Mode: 1
@@ -5410,7 +5480,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -5422,7 +5492,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -5434,7 +5504,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -5446,7 +5516,7 @@ MonoBehaviour:
           m_StringArgument: ShootEarthPrison_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -5506,7 +5576,7 @@ MonoBehaviour:
     _minActiveTime: 0.1
     _maxStepTime: 0
   - _activeState: {fileID: 5589881895465392866}
-    _minActiveTime: 0.2
+    _minActiveTime: 0.1
     _maxStepTime: 1
   _remainActiveWhile: {fileID: 0}
   _remainActiveCooldown: 0
@@ -5696,7 +5766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14164f8f23faae4293baeb84485b3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hand: {fileID: 2695754001123643582}
+  _hand: {fileID: 1747239052671634951}
 --- !u!114 &6675334999698195780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5713,7 +5783,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -5725,7 +5795,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -5737,7 +5807,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -5749,7 +5819,7 @@ MonoBehaviour:
           m_StringArgument: Gust_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -5954,7 +6024,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -5966,7 +6036,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -5978,7 +6048,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -5990,7 +6060,7 @@ MonoBehaviour:
           m_StringArgument: ActivateShield_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -6002,7 +6072,7 @@ MonoBehaviour:
           m_StringArgument: Shield_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -9193,7 +9263,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -9205,7 +9275,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -9217,7 +9287,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -9229,7 +9299,7 @@ MonoBehaviour:
           m_StringArgument: ShootFire_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -9289,7 +9359,7 @@ MonoBehaviour:
     _minActiveTime: 0.1
     _maxStepTime: 0
   - _activeState: {fileID: 7755219030333033696}
-    _minActiveTime: 0.2
+    _minActiveTime: 0.1
     _maxStepTime: 1
   _remainActiveWhile: {fileID: 0}
   _remainActiveCooldown: 0
@@ -9341,7 +9411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14164f8f23faae4293baeb84485b3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hand: {fileID: 2695754001123643582}
+  _hand: {fileID: 1747239052671634951}
 --- !u!114 &8160426653638793046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9358,7 +9428,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -9370,7 +9440,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -9382,7 +9452,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -9394,7 +9464,7 @@ MonoBehaviour:
           m_StringArgument: Lightning_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -9829,7 +9899,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -9841,7 +9911,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -9853,7 +9923,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -9865,7 +9935,7 @@ MonoBehaviour:
           m_StringArgument: ShootLightning_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -9925,7 +9995,7 @@ MonoBehaviour:
     _minActiveTime: 0.1
     _maxStepTime: 0
   - _activeState: {fileID: 5460971555043382586}
-    _minActiveTime: 0.2
+    _minActiveTime: 0.1
     _maxStepTime: 1
   _remainActiveWhile: {fileID: 0}
   _remainActiveCooldown: 0
@@ -9994,7 +10064,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -10006,7 +10076,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -10018,7 +10088,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -10030,7 +10100,7 @@ MonoBehaviour:
           m_StringArgument: Lightning_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -10413,7 +10483,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -10425,7 +10495,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -10437,7 +10507,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -10449,7 +10519,7 @@ MonoBehaviour:
           m_StringArgument: Aim_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -10461,7 +10531,7 @@ MonoBehaviour:
           m_StringArgument: ActivateAim_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -10608,7 +10678,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -10620,7 +10690,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -10632,7 +10702,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -10644,7 +10714,7 @@ MonoBehaviour:
           m_StringArgument: ShootGust_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -10704,7 +10774,7 @@ MonoBehaviour:
     _minActiveTime: 0.1
     _maxStepTime: 0
   - _activeState: {fileID: 1291463231568593387}
-    _minActiveTime: 0.2
+    _minActiveTime: 0.1
     _maxStepTime: 1
   _remainActiveWhile: {fileID: 0}
   _remainActiveCooldown: 0
@@ -10773,7 +10843,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -10785,7 +10855,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -10797,7 +10867,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -10809,7 +10879,7 @@ MonoBehaviour:
           m_StringArgument: Fire_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -10944,7 +11014,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -10956,7 +11026,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -10968,7 +11038,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -10980,7 +11050,7 @@ MonoBehaviour:
           m_StringArgument: ShootFire_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -11040,10 +11110,372 @@ MonoBehaviour:
     _minActiveTime: 0.1
     _maxStepTime: 0
   - _activeState: {fileID: 7922835099331504489}
-    _minActiveTime: 0.2
+    _minActiveTime: 0.1
     _maxStepTime: 1
   _remainActiveWhile: {fileID: 0}
   _remainActiveCooldown: 0
+--- !u!1 &6040823278151962530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4044462577559411428}
+  - component: {fileID: 6007867914856492120}
+  - component: {fileID: 2623571939591974804}
+  - component: {fileID: 890886069321348055}
+  - component: {fileID: 1392412470315907442}
+  - component: {fileID: 6248853656047211201}
+  m_Layer: 3
+  m_Name: Activate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4044462577559411428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040823278151962530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5075513623120961619}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6007867914856492120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040823278151962530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de76f7169412b8f4896235a1585d8939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selector: {fileID: 2623571939591974804}
+  _whenSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7298211777735668784}
+        m_TargetAssemblyTypeName: AimRepository, Assembly-CSharp
+        m_MethodName: SetAimPalm
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7298211777649975028}
+        m_TargetAssemblyTypeName: ProjectileShowcaser, Assembly-CSharp
+        m_MethodName: ShowcaseProjectile
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 830280472722832041, guid: 97e595907b19be243bd2488ee41617e3,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1441628001}
+        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
+        m_MethodName: ClearGestureData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1441628001}
+        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
+        m_MethodName: SetCallerHand
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: RightHand
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1441628001}
+        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
+        m_MethodName: SetGestureInput
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ActivateFire_V2
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1441628001}
+        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
+        m_MethodName: WriteToWriter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _whenUnselected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7298211777649975028}
+        m_TargetAssemblyTypeName: ProjectileShowcaser, Assembly-CSharp
+        m_MethodName: DeleteProjectile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2623571939591974804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040823278151962530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd9780be7e512049b4d33d5c9d0ac92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activeState: {fileID: 890886069321348055}
+--- !u!114 &890886069321348055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040823278151962530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aebd5da9a8bd22243b407f1927f4965b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activeStates:
+  - {fileID: 1392412470315907442}
+  - {fileID: 6248853656047211201}
+  _logicOperator: 0
+--- !u!114 &1392412470315907442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040823278151962530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f7cfb1f9629da4494ac0840f3a3cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hand: {fileID: 8438989937147880890}
+  _shapes:
+  - {fileID: 11400000, guid: 59372ef4ef70d7e4c95cb82f874ce6ba, type: 2}
+--- !u!114 &6248853656047211201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040823278151962530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6f9440d09721c849864899e8986e219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hand: {fileID: 8438989937147880890}
+  _transformFeatureConfigs:
+    _values:
+    - _mode: 0
+      _feature: 3
+      _state: 9
+  _transformConfig:
+    PositionOffset: {x: 0, y: 0, z: 0}
+    RotationOffset: {x: 0, y: 0, z: 0}
+    UpVectorType: 0
+    FeatureThresholds: {fileID: 11400000, guid: 039cf5a7424e1e046b79287e9375cf09,
+      type: 2}
+--- !u!1 &6048733484129702763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8302472514221806655}
+  - component: {fileID: 4563037981088133844}
+  - component: {fileID: 1630495114131460909}
+  - component: {fileID: 4860246648982389563}
+  - component: {fileID: 731548256438061201}
+  m_Layer: 3
+  m_Name: Throw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8302472514221806655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6048733484129702763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5075513623120961619}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4563037981088133844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6048733484129702763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de76f7169412b8f4896235a1585d8939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selector: {fileID: 1630495114131460909}
+  _whenSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1441628001}
+        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
+        m_MethodName: ClearGestureData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1441628001}
+        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
+        m_MethodName: SetCallerHand
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: RightHand
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1441628001}
+        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
+        m_MethodName: SetGestureInput
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ThrowFire_V2
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1441628001}
+        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
+        m_MethodName: WriteToWriter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _whenUnselected:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1630495114131460909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6048733484129702763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd9780be7e512049b4d33d5c9d0ac92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activeState: {fileID: 4860246648982389563}
+--- !u!114 &4860246648982389563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6048733484129702763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aebd5da9a8bd22243b407f1927f4965b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activeStates:
+  - {fileID: 731548256438061201}
+  _logicOperator: 0
+--- !u!114 &731548256438061201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6048733484129702763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6f9440d09721c849864899e8986e219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hand: {fileID: 8438989937147880890}
+  _transformFeatureConfigs:
+    _values:
+    - _mode: 0
+      _feature: 5
+      _state: 15
+  _transformConfig:
+    PositionOffset: {x: 0, y: 0, z: 0}
+    RotationOffset: {x: 0, y: 0, z: 0}
+    UpVectorType: 0
+    FeatureThresholds: {fileID: 11400000, guid: 039cf5a7424e1e046b79287e9375cf09,
+      type: 2}
 --- !u!1 &6059996539598995972
 GameObject:
   m_ObjectHideFlags: 0
@@ -11122,7 +11554,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -11134,7 +11566,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -11146,7 +11578,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -11158,7 +11590,7 @@ MonoBehaviour:
           m_StringArgument: EarthPrison_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -11170,7 +11602,7 @@ MonoBehaviour:
           m_StringArgument: ActivateEarthPrison_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -11961,6 +12393,198 @@ Transform:
   m_Father: {fileID: 2219465225827395225}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7018102043112393273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5075513623120961619}
+  - component: {fileID: 8438989937147880890}
+  - component: {fileID: 7086753197487658268}
+  - component: {fileID: 8942532154734923217}
+  - component: {fileID: 5812717852059248234}
+  - component: {fileID: 8189939599030144013}
+  m_Layer: 3
+  m_Name: RightHand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5075513623120961619
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7018102043112393273}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4044462577559411428}
+  - {fileID: 8302472514221806655}
+  m_Father: {fileID: 7298211778662283544}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8438989937147880890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7018102043112393273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14164f8f23faae4293baeb84485b3d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hand: {fileID: 1747239052671634951}
+--- !u!114 &7086753197487658268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7018102043112393273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de76f7169412b8f4896235a1585d8939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selector: {fileID: 8942532154734923217}
+  _whenSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7298211777735668784}
+        m_TargetAssemblyTypeName: AimRepository, Assembly-CSharp
+        m_MethodName: SetAimPalm
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5352757158585384502}
+        m_TargetAssemblyTypeName: ShootProjectile, Assembly-CSharp
+        m_MethodName: ShootDEBUG
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3356542801603858544, guid: 8b9b46a590814154ebf13380e6652dca,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: Projectile, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1441628001}
+        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
+        m_MethodName: ClearGestureData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1441628001}
+        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
+        m_MethodName: SetCallerHand
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: RightHand
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1441628001}
+        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
+        m_MethodName: SetActionExecuted
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ShootFire_V2
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1441628001}
+        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
+        m_MethodName: WriteToWriter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _whenUnselected:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8942532154734923217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7018102043112393273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd9780be7e512049b4d33d5c9d0ac92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activeState: {fileID: 5812717852059248234}
+--- !u!114 &5812717852059248234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7018102043112393273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2a8d5cf844b463aabaed6d6db3da8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sequence: {fileID: 8189939599030144013}
+  _activateIfStepsStarted: 0
+  _activateIfStepsComplete: 1
+--- !u!114 &8189939599030144013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7018102043112393273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7ab4178b1f98e40bc6baf2176709df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stepsToActivate:
+  - _activeState: {fileID: 890886069321348055}
+    _minActiveTime: 0.1
+    _maxStepTime: 300
+  - _activeState: {fileID: 4860246648982389563}
+    _minActiveTime: 0.5
+    _maxStepTime: 3
+  _remainActiveWhile: {fileID: 0}
+  _remainActiveCooldown: 0
 --- !u!1 &7103283457321952418
 GameObject:
   m_ObjectHideFlags: 0
@@ -12085,7 +12709,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -12097,7 +12721,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -12109,7 +12733,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -12121,7 +12745,7 @@ MonoBehaviour:
           m_StringArgument: ActivateThrowEarthPrison_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -12298,7 +12922,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -12310,7 +12934,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -12322,7 +12946,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -12334,7 +12958,7 @@ MonoBehaviour:
           m_StringArgument: ThrowEarthPrison_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -12453,7 +13077,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -12465,7 +13089,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -12477,7 +13101,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -12489,7 +13113,7 @@ MonoBehaviour:
           m_StringArgument: ThrowEarthPrison_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -12664,7 +13288,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -12676,7 +13300,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -12688,7 +13312,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -12700,7 +13324,7 @@ MonoBehaviour:
           m_StringArgument: ShootGust_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -12840,7 +13464,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -12852,7 +13476,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -12864,7 +13488,7 @@ MonoBehaviour:
           m_StringArgument: Both
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -12876,7 +13500,7 @@ MonoBehaviour:
           m_StringArgument: ActivateRecover_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -13010,7 +13634,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -13022,7 +13646,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -13034,7 +13658,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -13046,7 +13670,7 @@ MonoBehaviour:
           m_StringArgument: Shield_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -13463,7 +14087,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -13475,7 +14099,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -13487,7 +14111,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -13499,7 +14123,7 @@ MonoBehaviour:
           m_StringArgument: Recover_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -13732,7 +14356,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -13744,7 +14368,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -13756,7 +14380,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -13768,7 +14392,7 @@ MonoBehaviour:
           m_StringArgument: AimLightning_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -13912,7 +14536,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -13924,7 +14548,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -13936,7 +14560,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -13948,7 +14572,7 @@ MonoBehaviour:
           m_StringArgument: ActivateGust_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -14120,7 +14744,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -14132,7 +14756,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -14144,9 +14768,9 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
-        m_MethodName: SetActionExecuted
+        m_MethodName: SetGestureInput
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14156,7 +14780,7 @@ MonoBehaviour:
           m_StringArgument: ActivateThrowEarthPrison_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -14341,7 +14965,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -14353,7 +14977,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -14365,7 +14989,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -14377,7 +15001,7 @@ MonoBehaviour:
           m_StringArgument: ThrowGust_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -14623,7 +15247,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -14635,7 +15259,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -14647,7 +15271,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -14659,7 +15283,7 @@ MonoBehaviour:
           m_StringArgument: AimLightning_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -14818,7 +15442,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -14830,7 +15454,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -14842,7 +15466,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -14854,7 +15478,7 @@ MonoBehaviour:
           m_StringArgument: ShootGust_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -14998,7 +15622,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -15010,7 +15634,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -15022,7 +15646,7 @@ MonoBehaviour:
           m_StringArgument: Both
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -15034,7 +15658,7 @@ MonoBehaviour:
           m_StringArgument: ShootLightning_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -15094,7 +15718,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -15106,7 +15730,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -15118,7 +15742,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -15130,7 +15754,7 @@ MonoBehaviour:
           m_StringArgument: ActivateLightning_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -15250,7 +15874,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -15262,7 +15886,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -15274,7 +15898,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -15286,7 +15910,7 @@ MonoBehaviour:
           m_StringArgument: ActivateActivationEarthPrison_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -15432,7 +16056,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -15444,7 +16068,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -15456,7 +16080,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -15468,7 +16092,7 @@ MonoBehaviour:
           m_StringArgument: ThrowEarthPrison_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -15524,160 +16148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hand: {fileID: 7298211777788461665}
-  _transformFeatureConfigs:
-    _values:
-    - _mode: 0
-      _feature: 5
-      _state: 15
-  _transformConfig:
-    PositionOffset: {x: 0, y: 0, z: 0}
-    RotationOffset: {x: 0, y: 0, z: 0}
-    UpVectorType: 0
-    FeatureThresholds: {fileID: 11400000, guid: 039cf5a7424e1e046b79287e9375cf09,
-      type: 2}
---- !u!1 &7298211777509875814
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7298211777509875809}
-  - component: {fileID: 7298211777509875868}
-  - component: {fileID: 7298211777509875869}
-  - component: {fileID: 7298211777509875810}
-  - component: {fileID: 7298211777509875808}
-  m_Layer: 3
-  m_Name: Throw
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7298211777509875809
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211777509875814}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7298211777758996094}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7298211777509875868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211777509875814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de76f7169412b8f4896235a1585d8939, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _selector: {fileID: 7298211777509875869}
-  _whenSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
-        m_MethodName: ClearGestureData
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
-        m_MethodName: SetCallerHand
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: RightHand
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
-        m_MethodName: SetGestureInput
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ThrowFire_V2
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
-        m_MethodName: WriteToWriter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _whenUnselected:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7298211777509875869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211777509875814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cd9780be7e512049b4d33d5c9d0ac92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _activeState: {fileID: 7298211777509875810}
---- !u!114 &7298211777509875810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211777509875814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aebd5da9a8bd22243b407f1927f4965b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _activeStates:
-  - {fileID: 7298211777509875808}
-  _logicOperator: 0
---- !u!114 &7298211777509875808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211777509875814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6f9440d09721c849864899e8986e219, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hand: {fileID: 7298211777758996089}
   _transformFeatureConfigs:
     _values:
     - _mode: 0
@@ -15788,7 +16258,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -15800,7 +16270,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -15812,7 +16282,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -15824,7 +16294,7 @@ MonoBehaviour:
           m_StringArgument: Shield_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -16022,7 +16492,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -16034,7 +16504,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -16046,7 +16516,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -16058,7 +16528,7 @@ MonoBehaviour:
           m_StringArgument: ActivateEarthPrison_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -16231,7 +16701,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -16243,7 +16713,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -16255,7 +16725,7 @@ MonoBehaviour:
           m_StringArgument: Both
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -16267,7 +16737,7 @@ MonoBehaviour:
           m_StringArgument: ActivateShield_V2
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -16476,198 +16946,6 @@ MonoBehaviour:
   end: {fileID: 0}
   palmAim: {fileID: 4935818854606349149}
   fingerEndAim: {fileID: 7298211777625084119}
---- !u!1 &7298211777758996095
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7298211777758996094}
-  - component: {fileID: 7298211777758996089}
-  - component: {fileID: 7298211777758996085}
-  - component: {fileID: 7298211777758996090}
-  - component: {fileID: 7298211777758996091}
-  - component: {fileID: 7298211777758996088}
-  m_Layer: 3
-  m_Name: RightHand
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7298211777758996094
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211777758996095}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7298211778503961811}
-  - {fileID: 7298211777509875809}
-  m_Father: {fileID: 7298211778662283544}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7298211777758996089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211777758996095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14164f8f23faae4293baeb84485b3d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hand: {fileID: 1747239052671634951}
---- !u!114 &7298211777758996085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211777758996095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de76f7169412b8f4896235a1585d8939, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _selector: {fileID: 7298211777758996090}
-  _whenSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7298211777783565531}
-        m_TargetAssemblyTypeName: AimRepository, Assembly-CSharp
-        m_MethodName: SetAimPalm
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5352757158585384502}
-        m_TargetAssemblyTypeName: ShootProjectile, Assembly-CSharp
-        m_MethodName: ShootDEBUG
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 3356542801603858544, guid: 8b9b46a590814154ebf13380e6652dca,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: Projectile, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
-        m_MethodName: ClearGestureData
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
-        m_MethodName: SetCallerHand
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: RightHand
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
-        m_MethodName: SetActionExecuted
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ShootFire_V2
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
-        m_MethodName: WriteToWriter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _whenUnselected:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7298211777758996090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211777758996095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cd9780be7e512049b4d33d5c9d0ac92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _activeState: {fileID: 7298211777758996091}
---- !u!114 &7298211777758996091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211777758996095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a8d5cf844b463aabaed6d6db3da8c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sequence: {fileID: 7298211777758996088}
-  _activateIfStepsStarted: 0
-  _activateIfStepsComplete: 1
---- !u!114 &7298211777758996088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211777758996095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e7ab4178b1f98e40bc6baf2176709df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _stepsToActivate:
-  - _activeState: {fileID: 7298211778503961804}
-    _minActiveTime: 0.1
-    _maxStepTime: 300
-  - _activeState: {fileID: 7298211777509875810}
-    _minActiveTime: 0.5
-    _maxStepTime: 3
-  _remainActiveWhile: {fileID: 0}
-  _remainActiveCooldown: 0
 --- !u!1 &7298211777783565528
 GameObject:
   m_ObjectHideFlags: 0
@@ -16808,7 +17086,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -16820,7 +17098,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -16832,7 +17110,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -16844,7 +17122,7 @@ MonoBehaviour:
           m_StringArgument: ShootEarthPrison_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -17005,7 +17283,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -17017,7 +17295,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -17029,7 +17307,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -17041,7 +17319,7 @@ MonoBehaviour:
           m_StringArgument: Recover_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -17204,7 +17482,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -17216,7 +17494,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -17228,7 +17506,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -17240,7 +17518,7 @@ MonoBehaviour:
           m_StringArgument: ActivateGust_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -17489,7 +17767,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -17501,7 +17779,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -17513,7 +17791,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -17525,7 +17803,7 @@ MonoBehaviour:
           m_StringArgument: ShootEarthPrison_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -17717,7 +17995,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -17729,7 +18007,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -17741,7 +18019,7 @@ MonoBehaviour:
           m_StringArgument: Both
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -17753,7 +18031,7 @@ MonoBehaviour:
           m_StringArgument: ShootLightning_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -17813,7 +18091,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -17825,7 +18103,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -17837,7 +18115,7 @@ MonoBehaviour:
           m_StringArgument: RightHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -17849,7 +18127,7 @@ MonoBehaviour:
           m_StringArgument: ActivateLightning_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -17991,7 +18269,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -18003,7 +18281,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -18015,7 +18293,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -18027,7 +18305,7 @@ MonoBehaviour:
           m_StringArgument: ThrowActivationEarthPrison_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -18187,7 +18465,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -18199,9 +18477,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
-        m_MethodName: SetActionExecuted
+        m_MethodName: SetCallerHand
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18211,7 +18489,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -18223,7 +18501,7 @@ MonoBehaviour:
           m_StringArgument: ActivateActivationEarthPrison_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -18395,7 +18673,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -18407,7 +18685,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -18419,7 +18697,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -18431,7 +18709,7 @@ MonoBehaviour:
           m_StringArgument: ActivateFire_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -18526,214 +18804,6 @@ MonoBehaviour:
     UpVectorType: 0
     FeatureThresholds: {fileID: 11400000, guid: 039cf5a7424e1e046b79287e9375cf09,
       type: 2}
---- !u!1 &7298211778503961808
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7298211778503961811}
-  - component: {fileID: 7298211778503961806}
-  - component: {fileID: 7298211778503961807}
-  - component: {fileID: 7298211778503961804}
-  - component: {fileID: 7298211778503961805}
-  - component: {fileID: 7298211778503961810}
-  m_Layer: 3
-  m_Name: Activate
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7298211778503961811
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211778503961808}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7298211777758996094}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7298211778503961806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211778503961808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de76f7169412b8f4896235a1585d8939, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _selector: {fileID: 7298211778503961807}
-  _whenSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7298211777783565531}
-        m_TargetAssemblyTypeName: AimRepository, Assembly-CSharp
-        m_MethodName: SetAimPalm
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7298211778416441857}
-        m_TargetAssemblyTypeName: ProjectileShowcaser, Assembly-CSharp
-        m_MethodName: ShowcaseProjectile
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 830280472722832041, guid: 97e595907b19be243bd2488ee41617e3,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
-        m_MethodName: ClearGestureData
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
-        m_MethodName: SetCallerHand
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: RightHand
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
-        m_MethodName: SetGestureInput
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ActivateFire_V2
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
-        m_MethodName: WriteToWriter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _whenUnselected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7298211778416441857}
-        m_TargetAssemblyTypeName: ProjectileShowcaser, Assembly-CSharp
-        m_MethodName: DeleteProjectile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &7298211778503961807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211778503961808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cd9780be7e512049b4d33d5c9d0ac92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _activeState: {fileID: 7298211778503961804}
---- !u!114 &7298211778503961804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211778503961808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aebd5da9a8bd22243b407f1927f4965b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _activeStates:
-  - {fileID: 7298211778503961805}
-  - {fileID: 7298211778503961810}
-  _logicOperator: 0
---- !u!114 &7298211778503961805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211778503961808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08f7cfb1f9629da4494ac0840f3a3cfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hand: {fileID: 7298211777758996089}
-  _shapes:
-  - {fileID: 11400000, guid: 59372ef4ef70d7e4c95cb82f874ce6ba, type: 2}
---- !u!114 &7298211778503961810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298211778503961808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6f9440d09721c849864899e8986e219, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hand: {fileID: 7298211777758996089}
-  _transformFeatureConfigs:
-    _values:
-    - _mode: 0
-      _feature: 3
-      _state: 9
-  _transformConfig:
-    PositionOffset: {x: 0, y: 0, z: 0}
-    RotationOffset: {x: 0, y: 0, z: 0}
-    UpVectorType: 0
-    FeatureThresholds: {fileID: 11400000, guid: 039cf5a7424e1e046b79287e9375cf09,
-      type: 2}
 --- !u!1 &7298211778527513023
 GameObject:
   m_ObjectHideFlags: 0
@@ -18785,7 +18855,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -18797,7 +18867,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -18809,7 +18879,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -18821,7 +18891,7 @@ MonoBehaviour:
           m_StringArgument: ThrowGust_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -19011,7 +19081,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -19023,7 +19093,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -19035,7 +19105,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -19047,7 +19117,7 @@ MonoBehaviour:
           m_StringArgument: ShootFire_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -19140,7 +19210,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7298211778605289638}
-  - {fileID: 7298211777758996094}
+  - {fileID: 5075513623120961619}
   m_Father: {fileID: 7298211777200902881}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19195,7 +19265,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -19207,7 +19277,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -19219,7 +19289,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -19231,7 +19301,7 @@ MonoBehaviour:
           m_StringArgument: ThrowFire_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -19377,7 +19447,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -19389,7 +19459,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -19401,7 +19471,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -19413,7 +19483,7 @@ MonoBehaviour:
           m_StringArgument: ActivateEarthPrison_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -19592,7 +19662,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -19604,7 +19674,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -19616,7 +19686,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -19628,7 +19698,7 @@ MonoBehaviour:
           m_StringArgument: ShootEarthPrison_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -19688,7 +19758,7 @@ MonoBehaviour:
     _minActiveTime: 0.1
     _maxStepTime: 0
   - _activeState: {fileID: 1420200507964631841}
-    _minActiveTime: 0.2
+    _minActiveTime: 0.1
     _maxStepTime: 1
   _remainActiveWhile: {fileID: 0}
   _remainActiveCooldown: 0
@@ -19769,7 +19839,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -19781,7 +19851,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -19793,7 +19863,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -19805,7 +19875,7 @@ MonoBehaviour:
           m_StringArgument: ShootGust_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -19865,7 +19935,7 @@ MonoBehaviour:
     _minActiveTime: 0.1
     _maxStepTime: 0
   - _activeState: {fileID: 8834075527197457453}
-    _minActiveTime: 0.2
+    _minActiveTime: 0.1
     _maxStepTime: 1
   _remainActiveWhile: {fileID: 0}
   _remainActiveCooldown: 0
@@ -19934,7 +20004,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -19946,7 +20016,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -19958,7 +20028,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -19970,7 +20040,7 @@ MonoBehaviour:
           m_StringArgument: Gust_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -20096,6 +20166,7 @@ Transform:
   m_Children:
   - {fileID: 2743913204447666066}
   - {fileID: 3007356070687973899}
+  - {fileID: 1441628003}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20176,7 +20247,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -20188,7 +20259,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -20200,7 +20271,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -20212,7 +20283,7 @@ MonoBehaviour:
           m_StringArgument: ShootLightning_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
@@ -20272,7 +20343,7 @@ MonoBehaviour:
     _minActiveTime: 0.1
     _maxStepTime: 0
   - _activeState: {fileID: 6180511092376932259}
-    _minActiveTime: 0.2
+    _minActiveTime: 0.1
     _maxStepTime: 1
   _remainActiveWhile: {fileID: 0}
   _remainActiveCooldown: 0
@@ -20468,7 +20539,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
         m_Mode: 1
@@ -20480,7 +20551,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetCallerHand
         m_Mode: 5
@@ -20492,7 +20563,7 @@ MonoBehaviour:
           m_StringArgument: LeftHand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetGestureInput
         m_Mode: 5
@@ -20504,7 +20575,7 @@ MonoBehaviour:
           m_StringArgument: Recover_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: SetActionExecuted
         m_Mode: 5
@@ -20516,7 +20587,7 @@ MonoBehaviour:
           m_StringArgument: ActivateRecover_V1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: WriteToWriter
         m_Mode: 1
