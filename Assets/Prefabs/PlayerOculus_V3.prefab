@@ -11166,7 +11166,7 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7298211777735668784}
+      - m_Target: {fileID: 7298211777783565531}
         m_TargetAssemblyTypeName: AimRepository, Assembly-CSharp
         m_MethodName: SetAimPalm
         m_Mode: 1
@@ -11178,7 +11178,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7298211777649975028}
+      - m_Target: {fileID: 7298211778416441857}
         m_TargetAssemblyTypeName: ProjectileShowcaser, Assembly-CSharp
         m_MethodName: ShowcaseProjectile
         m_Mode: 2
@@ -11242,7 +11242,7 @@ MonoBehaviour:
   _whenUnselected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7298211777649975028}
+      - m_Target: {fileID: 7298211778416441857}
         m_TargetAssemblyTypeName: ProjectileShowcaser, Assembly-CSharp
         m_MethodName: DeleteProjectile
         m_Mode: 1
@@ -12460,31 +12460,6 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7298211777735668784}
-        m_TargetAssemblyTypeName: AimRepository, Assembly-CSharp
-        m_MethodName: SetAimPalm
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5352757158585384502}
-        m_TargetAssemblyTypeName: ShootProjectile, Assembly-CSharp
-        m_MethodName: ShootDEBUG
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 3356542801603858544, guid: 8b9b46a590814154ebf13380e6652dca,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: Projectile, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1441628001}
         m_TargetAssemblyTypeName: GestureInputDataWrapper, Assembly-CSharp
         m_MethodName: ClearGestureData
@@ -12528,6 +12503,31 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7298211777783565531}
+        m_TargetAssemblyTypeName: AimRepository, Assembly-CSharp
+        m_MethodName: SetAimPalm
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5352757158585384502}
+        m_TargetAssemblyTypeName: ShootProjectile, Assembly-CSharp
+        m_MethodName: ShootDEBUG
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3356542801603858544, guid: 8b9b46a590814154ebf13380e6652dca,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: Projectile, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
